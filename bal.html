@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somasree Majumder - Data Scientist & ML Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #4f46e5;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gradient: linear-gradient(135deg, #4f46e5, #7c3aed);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f3f4f6;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            padding: 6rem 0;
+            background: var(--gradient);
+            color: white;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--dark);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .experience-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .experience-title {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-company {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievements-list {
+            list-style: none;
+        }
+
+        .achievements-list li {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .education-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .publications-list {
+            list-style: none;
+        }
+
+        .publications-list li {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .publications-list a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .publications-list a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#publications">Publications</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Somasree Majumder</h1>
+                <p>Data Scientist & Machine Learning Engineer</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/somasree-majumder-3533411aa/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/soma2000-lang" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.kaggle.com/somasreemajumder" target="_blank"><i class="fab fa-kaggle"></i></a>
+                    <a href="https://medium.com/@seckroll16" target="_blank"><i class="fab fa-medium"></i></a>
+                    <a href="mailto:bishnupadamajumder32@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Deep Learning</div>
+                <div class="skill-item">Statistics</div>
+                <div class="skill-item">C++</div>
+                <div class="skill-item">Docker</div>
+                <div class="skill-item">Databases</div>
+                <div class="skill-item">LLD</div>
+                <div class="skill-item">Django</div>
+                <div class="skill-item">Full Stack</div>
+                <div class="skill-item">AWS</div>
+                <div class="skill-item">Nginx</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            
+            <div class="experience-item">
+                <h3 class="experience-title">Analyst (Machine Learning and Development)</h3>
+                <div class="experience-company">Deloitte</div>
+                <div class="experience-date">July 2023 - Present | Hyderabad</div>
+                <p>Implemented advanced features like dynamic routing and form validations. Built efficient REST APIs using Node.js, Express, and Mongoose. Implemented JWT authentication and robust middleware for security.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="experience-title">Freelance Machine Learning Developer</h3>
+                <div class="experience-company">Unify.ai</div>
+                <div class="experience-date">February 2023 - May 2023 | Remote</div>
+                <p>Implemented functions in Tensorflow, Jax, Numpy, and Torch, PaddlePaddle. Increased code coverage by 10%. Guided contributors and reviewed commits. Wrote Ivy OpConverters for TensorRT backend.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Product Classification (Amazon Hackathon)</h3>
+                        <p>Utilized ALBERT models and implemented ensemble technique to enhance accuracy by 10%. Employed synthetic optimized PyTorch datasets for improved performance.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">User Rating Prediction</h3>
+                        <p>Developed a model with feature engineering, created RAG pipeline for multilingual queries, utilized FAISS for vector database management, and containerized with Docker.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Django Recommendation System</h3>
+                        <p>Developed a Django website using advanced recommendation algorithms including content-based filtering, FunkSVD, and popularity-based recommenders.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Customer Churn Prediction</h3>
+                        <p>Developed a predictive model achieving 85% accuracy through advanced feature engineering and machine learning techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <ul class="publications-list">
+                <li>
+                    <h3>SPECTRUM 2020 - Application of Machine Learning in Medicine</h3>
+                    <p>Discussed how various deep learning models solve complex real-life problems</p>
+                    <a href="https://bit.ly/2Y5ZqZm" target="_blank">Read Publication</a>
+                </li>
+                <li>
+                    <h3>IEMATICS 2020 - Homomorphic Encryption</h3>
+                    <p>Research on data compression techniques for secure transmission and storage</p>
+                    <a href="https://bit.ly/3kbDfs2" target="_blank">Read Publication</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="achievements" class="section">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <ul class="achievements-list">
+                <li>Multiple Certifications in NLP, CNN, and Deep Neural Networks from Coursera</li>
+                <li>Ranked 18th among 2500 participants in HackerEarth ML Challenge</li>
+                <li>Ranked 1.6k globally in Google Code Jam for Women</li>
+                <li>Invited as mentor for Open Source Day by AnitaB.org</li>
+                <li>Ranked 12th among 1000+ participants in Cipla data science competition</li>
+                <li>LiFT Scholar 2022 (Top 500 candidates worldwide in developers category)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <h3>Institute of Engineering and Management</h3>
+                <p>Electronics and Communication Engineering</p>
+                <p>2019 - 2023</p>
+                <p>CGPA: 8.94</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
