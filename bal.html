@@ -1293,6 +1293,240 @@
       </div>
     </section>
 
+    <!-- Previous sections remain the same -->
+    <section id="blog" class="py-5">
+      <div class="container">
+          <h2 class="text-center mb-5">Blog Posts</h2>
+          <div class="row g-4">
+              <!-- Featured Blog Post -->
+              <div class="col-12 mb-4">
+                  <div class="card featured-post h-100 blog-card" onclick="toggleBlog(this)">
+                      <div class="card-body p-4">
+                          <div class="blog-brief">
+                              <div class="row align-items-center">
+                                  <div class="col-md-8">
+                                      <div class="featured-badge mb-2">
+                                          <span class="badge bg-primary">Featured</span>
+                                      </div>
+                                      <h3 class="card-title h4">
+                                          Understanding Transformers: A Deep Dive into Attention Mechanisms
+                                      </h3>
+                                      <p class="card-text text-muted mb-3">
+                                          An in-depth exploration of transformer architecture and how attention mechanisms revolutionized natural language processing.
+                                      </p>
+                                      <div class="post-meta">
+                                          <span class="me-3"><i class="far fa-calendar me-1"></i> Oct 15, 2023</span>
+                                          <span class="me-3"><i class="far fa-clock me-1"></i> 15 min read</span>
+                                          <span><i class="fas fa-tags me-1"></i> Machine Learning, NLP</span>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4 mt-3 mt-md-0">
+                                      <img src="/api/placeholder/400/300" alt="Featured blog post" class="img-fluid rounded blog-image">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="blog-details mt-4">
+                              <div class="expanded-content">
+                                  <h4>Introduction to Transformers</h4>
+                                  <p>The Transformer architecture, introduced in the landmark paper "Attention Is All You Need," has revolutionized natural language processing and beyond. This blog post provides a comprehensive overview of how Transformers work and why they're so effective.</p>
+                                  
+                                  <h4>Key Components</h4>
+                                  <ul>
+                                      <li><strong>Self-Attention Mechanism:</strong> Allows the model to weigh the importance of different words in relation to each other</li>
+                                      <li><strong>Multi-Head Attention:</strong> Enables the model to focus on different aspects of the input simultaneously</li>
+                                      <li><strong>Position Encodings:</strong> Provides sequential information without recurrence</li>
+                                  </ul>
+  
+                                  <h4>How Attention Works</h4>
+                                  <p>The attention mechanism can be broken down into three main components:</p>
+                                  <ol>
+                                      <li>Query vectors: What we're looking for</li>
+                                      <li>Key vectors: What we have to match against</li>
+                                      <li>Value vectors: The actual content we want to aggregate</li>
+                                  </ol>
+  
+                                  <h4>Practical Applications</h4>
+                                  <p>Transformers have found success in various applications:</p>
+                                  <ul>
+                                      <li>Machine Translation</li>
+                                      <li>Text Summarization</li>
+                                      <li>Question Answering</li>
+                                      <li>Code Generation</li>
+                                  </ul>
+  
+                                  <div class="mt-4">
+                                      <a href="#" class="read-more-link">Read Full Article <i class="fas fa-arrow-right ms-2"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Regular Blog Posts -->
+              <div class="col-md-6 col-lg-4">
+                  <div class="card blog-card h-100" onclick="toggleBlog(this)">
+                      <div class="card-body p-4">
+                          <div class="blog-brief">
+                              <div class="post-img-wrapper mb-3">
+                                  <img src="/api/placeholder/400/250" alt="Blog post" class="img-fluid rounded blog-image">
+                              </div>
+                              <h4 class="card-title">
+                                  Building Scalable Backend Systems with Node.js
+                              </h4>
+                              <p class="card-text text-muted">
+                                  Best practices and architectural patterns for building high-performance Node.js applications.
+                              </p>
+                              <div class="post-meta">
+                                  <span class="me-3"><i class="far fa-calendar me-1"></i> Sep 28, 2023</span>
+                                  <span><i class="far fa-clock me-1"></i> 10 min read</span>
+                              </div>
+                          </div>
+                          <div class="blog-details mt-4">
+                              <div class="expanded-content">
+                                  <h4>Scalability in Node.js</h4>
+                                  <p>Building scalable backend systems requires careful consideration of architecture, performance, and maintainability. This post explores proven patterns and best practices.</p>
+  
+                                  <h4>Key Architectural Patterns</h4>
+                                  <ul>
+                                      <li><strong>Microservices Architecture:</strong> Breaking down complex applications</li>
+                                      <li><strong>Event-Driven Design:</strong> Handling asynchronous operations</li>
+                                      <li><strong>Caching Strategies:</strong> Improving response times</li>
+                                  </ul>
+  
+                                  <h4>Performance Optimization</h4>
+                                  <p>Learn about crucial performance optimization techniques:</p>
+                                  <ul>
+                                      <li>Database query optimization</li>
+                                      <li>Memory management</li>
+                                      <li>Load balancing</li>
+                                  </ul>
+  
+                                  <div class="mt-4">
+                                      <a href="#" class="read-more-link">Read Full Article <i class="fas fa-arrow-right ms-2"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Add more blog posts with the same structure -->
+  
+          </div>
+  
+          <!-- View All Posts Button -->
+          <div class="col-12 text-center mt-4">
+              <a href="#" class="btn btn-outline-primary btn-lg view-all-btn">
+                  View All Posts
+                  <i class="fas fa-arrow-right ms-2"></i>
+              </a>
+          </div>
+      </div>
+  
+      <style>
+          .blog-card {
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              border: none;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+              cursor: pointer;
+          }
+  
+          .blog-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          }
+  
+          .blog-details {
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.5s ease-out;
+          }
+  
+          .blog-card.expanded .blog-details {
+              max-height: 2000px; /* Adjust based on your content */
+              transition: max-height 0.5s ease-in;
+          }
+  
+          .blog-brief {
+              border-bottom: 1px solid transparent;
+              transition: border-color 0.3s;
+          }
+  
+          .blog-card.expanded .blog-brief {
+              border-bottom-color: #dee2e6;
+              padding-bottom: 1rem;
+          }
+  
+          .expanded-content {
+              padding: 1rem 0;
+          }
+  
+          .expanded-content h4 {
+              color: #4f46e5;
+              margin-top: 1.5rem;
+              margin-bottom: 1rem;
+          }
+  
+          .expanded-content p {
+              color: #4b5563;
+              line-height: 1.7;
+              margin-bottom: 1rem;
+          }
+  
+          .expanded-content ul, .expanded-content ol {
+              color: #4b5563;
+              padding-left: 1.5rem;
+              margin-bottom: 1rem;
+          }
+  
+          .expanded-content li {
+              margin-bottom: 0.5rem;
+          }
+  
+          .read-more-link {
+              display: inline-flex;
+              align-items: center;
+              color: #4f46e5;
+              text-decoration: none;
+              font-weight: 500;
+              transition: all 0.3s ease;
+          }
+  
+          .read-more-link:hover {
+              color: #4338ca;
+          }
+  
+          .read-more-link i {
+              transition: transform 0.3s ease;
+          }
+  
+          .read-more-link:hover i {
+              transform: translateX(5px);
+          }
+      </style>
+  
+      <script>
+          function toggleBlog(card) {
+              // Remove expanded class from all other cards
+              document.querySelectorAll('.blog-card').forEach(otherCard => {
+                  if (otherCard !== card) {
+                      otherCard.classList.remove('expanded');
+                  }
+              });
+  
+              // Toggle expanded class on clicked card
+              card.classList.toggle('expanded');
+          }
+  
+          // Prevent links from triggering card expansion
+          document.querySelectorAll('.read-more-link').forEach(link => {
+              link.addEventListener('click', (e) => {
+                  e.stopPropagation();
+              });
+          });
+      </script>
+  </section>
     <!-- Achievements Section -->
     <section id="achievements" class="py-5">
       <div class="container">
