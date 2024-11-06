@@ -3,6 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self' https:; 
+                   script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net 'unsafe-inline';
+                   style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com 'unsafe-inline';
+                   img-src 'self' https: data:;
+                   font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
+                   frame-src 'none';
+                   connect-src 'self' https://api.emailjs.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Somasree Majumder -ML Engineer+Backend Developer</title>
     <!-- Bootstrap CSS -->
     <link
@@ -1617,6 +1634,155 @@
         </div>
       </div>
     </section>
+    <script>
+        // Form Security
+        document.addEventListener('DOMContentLoaded', function() {
+            // Anti-spam measures for contact form
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                // Add honeypot field
+                const honeyPotInput = document.createElement('input');
+                honeyPotInput.type = 'text';
+                honeyPotInput.name = 'bot-field';
+                honeyPotInput.style.display = 'none';
+                contactForm.appendChild(honeyPotInput);
+        
+                // Rate limiting
+                let lastSubmissionTime = 0;
+                const SUBMISSION_COOLDOWN = 30000; // 30 seconds
+        
+                // Form sanitization and validation
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+        
+                    // Check honeypot
+                    if (honeyPotInput.value) {
+                        console.log('Bot detected');
+                        return false;
+                    }
+        
+                    // Rate limiting check
+                    const now = Date.now();
+                    if (now - lastSubmissionTime < SUBMISSION_COOLDOWN) {
+                        showNotification(false, 'Please wait before submitting again.');
+                        return false;
+                    }
+        
+                    // Sanitize inputs
+                    const formData = new FormData(contactForm);
+                    for (let [key, value] of formData.entries()) {
+                        // Basic XSS prevention
+                        formData.set(key, sanitizeInput(value));
+                    }
+        
+                    // Validate email
+                    const email = formData.get('reply_to');
+                    if (!isValidEmail(email)) {
+                        showNotification(false, 'Please enter a valid email address.');
+                        return false;
+                    }
+        
+                    lastSubmissionTime = now;
+                    // Continue with form submission...
+                });
+            }
+        });
+        
+        // Input sanitization function
+        function sanitizeInput(input) {
+            return input
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#x27;')
+                .replace(/\//g, '&#x2F;');
+        }
+        
+        // Email validation function
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        // Add CSRF protection
+        function addCSRFToken() {
+            const token = generateRandomToken();
+            sessionStorage.setItem('csrfToken', token);
+            return token;
+        }
+        
+        function generateRandomToken() {
+            return Array.from(crypto.getRandomValues(new Uint8Array(32)))
+                .map(b => b.toString(16).padStart(2, '0'))
+                .join('');
+        }
+        
+        // Protect against clickjacking
+        if (window.self === window.top) {
+            // Page is not in an iframe
+            document.addEventListener('DOMContentLoaded', function() {
+                const style = document.createElement('style');
+                style.innerHTML = 'body { display: block !important; }';
+                document.head.appendChild(style);
+            });
+        } else {
+            // Block if loaded in iframe
+            document.body.innerHTML = 'This content cannot be displayed in an iframe.';
+        }
+        
+        // Input validation for all forms
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                const inputs = form.querySelectorAll('input, textarea');
+                inputs.forEach(input => {
+                    // Remove potentially harmful characters
+                    input.value = input.value.replace(/<[^>]*>/g, '');
+                });
+            });
+        });
+        
+        // Protect against data leakage
+        document.addEventListener('copy', function(e) {
+            const selection = document.getSelection();
+            if (selection.toString().includes('sensitive')) {
+                e.preventDefault();
+            }
+        });
+        
+        // Disable right-click on sensitive content
+        document.querySelectorAll('.sensitive-content').forEach(el => {
+            el.addEventListener('contextmenu', e => e.preventDefault());
+        });
+        
+        // Add security headers dynamically
+        function addSecurityHeaders() {
+            const meta = document.createElement('meta');
+            meta.httpEquiv = 'Content-Security-Policy';
+            meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;";
+            document.head.appendChild(meta);
+        }
+        
+        // Protect against XSS in URL parameters
+        function sanitizeURLParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            for (let [key, value] of urlParams) {
+                if (value.includes('<') || value.includes('>')) {
+                    urlParams.set(key, sanitizeInput(value));
+                }
+            }
+        }
+        
+        // Initialize all security measures
+        function initSecurity() {
+            addSecurityHeaders();
+            sanitizeURLParams();
+            addCSRFToken();
+        }
+        
+        // Call security initialization
+        initSecurity();
+        </script>
 
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
