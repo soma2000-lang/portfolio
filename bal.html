@@ -3,23 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" 
-          content="default-src 'self' https:; 
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' https:; 
                    script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net 'unsafe-inline';
                    style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com 'unsafe-inline';
                    img-src 'self' https: data:;
                    font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
                    frame-src 'none';
-                   connect-src 'self' https://api.emailjs.com;">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+                   connect-src 'self' https://api.emailjs.com;"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(), microphone=(), camera=()"
+    />
     <!-- Cache Control -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>Somasree Majumder -ML Engineer+Backend Developer</title>
     <!-- Bootstrap CSS -->
     <link
@@ -41,6 +52,37 @@
         background: linear-gradient(135deg, #4f46e5, #7c3aed);
         padding: 6rem 0;
         color: white;
+      }
+      .download-resume-btn {
+        background: rgba(255, 255, 255, 0.9);
+        color: #4f46e5;
+        border: 2px solid rgba(255, 255, 255, 0.9);
+        padding: 0.75rem 2rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .download-resume-btn:hover {
+        background: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .download-resume-btn i {
+        transition: transform 0.3s ease;
+      }
+
+      .download-resume-btn:hover i {
+        transform: translateY(-1px);
+      }
+
+      /* Ensure proper spacing in mobile view */
+      @media (max-width: 768px) {
+        .download-resume-btn {
+          padding: 0.5rem 1.5rem;
+          font-size: 1rem;
+        }
       }
 
       .nav-link {
@@ -155,11 +197,21 @@
         </div>
       </div>
     </nav>
+
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container text-center">
         <h1 class="display-4 fw-bold mb-3">Somasree Majumder</h1>
         <p class="lead mb-4">Backend Developer+Machine Learning Engineer</p>
+        <div class="mb-4">
+          <a
+            href="Somasre_Final_CV.pdf"
+            download
+            class="btn btn-light btn-lg download-resume-btn"
+          >
+            <i class="fas fa-download me-2"></i>Download Resume
+          </a>
+        </div>
         <div class="d-flex justify-content-center gap-4">
           <a
             href="https://www.linkedin.com/in/somasree-majumder-3533411aa/"
@@ -192,99 +244,116 @@
       </div>
     </section>
     <section id="about" class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <div class="profile-image-container text-center">
-                        <div class="image-wrapper">
-                            <!-- Using a placeholder image since external images aren't allowed -->
-                            <img src="image.png" alt="Somasree Majumder" class="profile-image rounded-circle img-fluid shadow" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="profile-content">
-                        <h2 class="mb-4">About Me</h2>
-                        <p class="lead mb-4">
-                            Passionate Software Engineer and Machine Learning Engineer with a strong foundation in full-stack development and deep learning technologies.
-                        </p>
-                        <div class="bio-details">
-                            <p class="mb-4">
-                                I'm a Software Engineer at Deloitte with expertise in backend development and machine learning. With a background in Electronics and Communication Engineering, I've developed a unique perspective that combines hardware understanding with software expertise. I specialize in building scalable backend systems, implementing machine learning solutions, and developing efficient algorithms.
-                            </p>
-                            <p class="mb-4">
-                                My experience spans across various domains including full-stack development, deep learning, and system design. I'm particularly interested in solving complex problems at scale and contributing to open-source projects. As an active member of the tech community, I've contributed to major projects including PyTorch, Hugging Face Transformers, and Keras.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="profile-image-container text-center">
+              <div class="image-wrapper">
+                <!-- Using a placeholder image since external images aren't allowed -->
+                <img
+                  src="image.png"
+                  alt="Somasree Majumder"
+                  class="profile-image rounded-circle img-fluid shadow"
+                />
+              </div>
             </div>
+          </div>
+          <div class="col-md-8">
+            <div class="profile-content">
+              <h2 class="mb-4">About Me</h2>
+              <p class="lead mb-4">
+                Passionate Software Engineer and Machine Learning Engineer with
+                a strong foundation in full-stack development and deep learning
+                technologies.
+              </p>
+              <div class="bio-details">
+                <p class="mb-4">
+                  I'm a Software Engineer at Deloitte with expertise in backend
+                  development and machine learning. With a background in
+                  Electronics and Communication Engineering, I've developed a
+                  unique perspective that combines hardware understanding with
+                  software expertise. I specialize in building scalable backend
+                  systems, implementing machine learning solutions, and
+                  developing efficient algorithms.
+                </p>
+                <p class="mb-4">
+                  My experience spans across various domains including
+                  full-stack development, deep learning, and system design. I'm
+                  particularly interested in solving complex problems at scale
+                  and contributing to open-source projects. As an active member
+                  of the tech community, I've contributed to major projects
+                  including PyTorch, Hugging Face Transformers, and Keras.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-    
-        <style>
-            .profile-image-container {
-                position: relative;
-                padding: 1rem;
-            }
-    
-            .image-wrapper {
-                position: relative;
-                max-width: 300px;
-                margin: 0 auto;
-            }
-    
-            .profile-image {
-                width: 100%;
-                height: auto;
-                border: 4px solid white;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s ease;
-            }
-    
-            .image-wrapper:hover .profile-image {
-                transform: scale(1.02);
-            }
-    
-            .profile-content {
-                padding: 1rem;
-            }
-    
-            .bio-details {
-                color: #4b5563;
-                line-height: 1.8;
-            }
-    
-            .quick-info .info-item {
-                padding: 0.75rem;
-                background: #f8f9fa;
-                border-radius: 8px;
-                display: flex;
-                align-items: center;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-    
-            .quick-info .info-item:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            }
-    
-            .info-item i {
-                font-size: 1.1rem;
-                width: 24px;
-            }
-    
-            @media (max-width: 768px) {
-                .profile-content {
-                    text-align: center;
-                }
-    
-                .quick-info {
-                    justify-content: center;
-                }
-            }
-        </style>
+      </div>
+
+      <style>
+        .profile-image-container {
+          position: relative;
+          padding: 1rem;
+        }
+
+        .image-wrapper {
+          position: relative;
+          max-width: 300px;
+          margin: 0 auto;
+        }
+
+        .profile-image {
+          width: 100%;
+          height: auto;
+          border: 4px solid white;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+        }
+
+        .image-wrapper:hover .profile-image {
+          transform: scale(1.02);
+        }
+
+        .profile-content {
+          padding: 1rem;
+        }
+
+        .bio-details {
+          color: #4b5563;
+          line-height: 1.8;
+        }
+
+        .quick-info .info-item {
+          padding: 0.75rem;
+          background: #f8f9fa;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .quick-info .info-item:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-item i {
+          font-size: 1.1rem;
+          width: 24px;
+        }
+
+        @media (max-width: 768px) {
+          .profile-content {
+            text-align: center;
+          }
+
+          .quick-info {
+            justify-content: center;
+          }
+        }
+      </style>
     </section>
-    
+
     <section id="projects" class="py-5">
       <div class="container">
         <h2 class="text-center mb-5">Projects</h2>
@@ -962,7 +1031,6 @@
             </style>
           </div>
 
-     
           <div class="col-md-6">
             <div class="card h-100 project-card" onclick="toggleProject(this)">
               <div class="card-body">
@@ -1016,7 +1084,7 @@
               </div>
             </div>
           </div>
-    
+
           <div class="col-md-6">
             <div class="card h-100 project-card" onclick="toggleProject(this)">
               <div class="card-body">
@@ -1140,16 +1208,18 @@
             <div class="card">
               <div class="card-body">
                 <h4 class="text-primary">
-                    Software Engineer | Deloitte (Full Stack with Backend Heavy)
+                  Software Engineer | Deloitte (Full Stack with Backend Heavy)
                 </h4>
                 <h5 class="fw-bold">Deloitte</h5>
                 <p class="text-muted mb-3">July 2023 - Present | Hyderabad</p>
                 <p>
-                    Developed full-stack applications using Node.js, JavaScript, created REST APIs, and deployed on AWS
-                    Built secure authentication using JWT, configured middleware for logging and error handling
-                    Developed webhooks for chatbots using Python SDK, implemented Business Entity Recognition
-                    Managed 6 large custom UI applications with focus on security best practices and data integrity
-
+                  Developed full-stack applications using Node.js, JavaScript,
+                  created REST APIs, and deployed on AWS Built secure
+                  authentication using JWT, configured middleware for logging
+                  and error handling Developed webhooks for chatbots using
+                  Python SDK, implemented Business Entity Recognition Managed 6
+                  large custom UI applications with focus on security best
+                  practices and data integrity
                 </p>
               </div>
             </div>
@@ -1163,10 +1233,11 @@
                 <h5 class="fw-bold">Unify.ai</h5>
                 <p class="text-muted mb-3">February 2023 - May 2023 | Remote</p>
                 <p>
-                    Implemented functions in TensorFlow, JAX, NumPy, Torch, PaddlePaddle; increased code coverage by
-                    10
-                    • Led unit-testing with Hypothesis, managed array-api-test suite achieving 80
-                    • Wrote Ivy OpConverters for TensorRT backend, guided contributors through large codebase
+                  Implemented functions in TensorFlow, JAX, NumPy, Torch,
+                  PaddlePaddle; increased code coverage by 10 • Led unit-testing
+                  with Hypothesis, managed array-api-test suite achieving 80 •
+                  Wrote Ivy OpConverters for TensorRT backend, guided
+                  contributors through large codebase
                 </p>
               </div>
             </div>
@@ -1355,165 +1426,238 @@
       </style>
     </section>
     <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Contact Me</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card contact-card">
-                        <div class="card-body p-4">
-                            <div class="row gy-4">
-                                <!-- Contact Info -->
-                                <div class="col-md-5">
-                                    <div class="contact-info">
-                                        <h3 class="h4 mb-4">Let's Connect</h3>
-                                        <div class="contact-item mb-4">
-                                            <i class="fas fa-envelope text-primary me-2"></i>
-                                            <a href="mailto:bishnupadamajumder32@gmail.com" class="text-decoration-none">
-                                                bishnupadamajumder32@gmail.com
-                                            </a>
-                                        </div>
-                                        <div class="contact-item mb-4">
-                                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
-                                            <span>Hyderabad, India</span>
-                                        </div>
-                                        <div class="social-links mt-4">
-                                            <a href="https://www.linkedin.com/in/somasree-majumder-3533411aa/" target="_blank" class="social-link">
-                                                <i class="fab fa-linkedin"></i>
-                                            </a>
-                                            <a href="https://github.com/soma2000-lang" target="_blank" class="social-link">
-                                                <i class="fab fa-github"></i>
-                                            </a>
-                                            <a href="https://www.kaggle.com/somasreemajumder" target="_blank" class="social-link">
-                                                <i class="fab fa-kaggle"></i>
-                                            </a>
-                                            <a href="https://medium.com/@seckroll16" target="_blank" class="social-link">
-                                                <i class="fab fa-medium"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <!-- Contact Form -->
-                                <div class="col-md-7">
-                                    <form id="contactForm" class="contact-form">
-                                        <div class="mb-3">
-                                            <label for="from_name" class="form-label">Name</label>
-                                            <input type="text" class="form-control" id="from_name" name="from_name" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="reply_to" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="reply_to" name="reply_to" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="subject" class="form-label">Subject</label>
-                                            <input type="text" class="form-control" id="subject" name="subject" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="message" class="form-label">Message</label>
-                                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary w-100" id="submitBtn">
-                                            <span class="button-text">Send Message</span>
-                                            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+      <div class="container">
+        <h2 class="text-center mb-5">Contact Me</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card contact-card">
+              <div class="card-body p-4">
+                <div class="row gy-4">
+                  <!-- Contact Info -->
+                  <div class="col-md-5">
+                    <div class="contact-info">
+                      <h3 class="h4 mb-4">Let's Connect</h3>
+                      <div class="contact-item mb-4">
+                        <i class="fas fa-envelope text-primary me-2"></i>
+                        <a
+                          href="mailto:bishnupadamajumder32@gmail.com"
+                          class="text-decoration-none"
+                        >
+                          bishnupadamajumder32@gmail.com
+                        </a>
+                      </div>
+                      <div class="contact-item mb-4">
+                        <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                        <span>Hyderabad, India</span>
+                      </div>
+                      <div class="social-links mt-4">
+                        <a
+                          href="https://www.linkedin.com/in/somasree-majumder-3533411aa/"
+                          target="_blank"
+                          class="social-link"
+                        >
+                          <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a
+                          href="https://github.com/soma2000-lang"
+                          target="_blank"
+                          class="social-link"
+                        >
+                          <i class="fab fa-github"></i>
+                        </a>
+                        <a
+                          href="https://www.kaggle.com/somasreemajumder"
+                          target="_blank"
+                          class="social-link"
+                        >
+                          <i class="fab fa-kaggle"></i>
+                        </a>
+                        <a
+                          href="https://medium.com/@seckroll16"
+                          target="_blank"
+                          class="social-link"
+                        >
+                          <i class="fab fa-medium"></i>
+                        </a>
+                      </div>
                     </div>
+                  </div>
+
+                  <!-- Contact Form -->
+                  <div class="col-md-7">
+                    <form id="contactForm" class="contact-form">
+                      <div class="mb-3">
+                        <label for="from_name" class="form-label">Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="from_name"
+                          name="from_name"
+                          required
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="reply_to" class="form-label">Email</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="reply_to"
+                          name="reply_to"
+                          required
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="subject"
+                          name="subject"
+                          required
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          name="message"
+                          rows="4"
+                          required
+                        ></textarea>
+                      </div>
+                      <button
+                        type="submit"
+                        class="btn btn-primary w-100"
+                        id="submitBtn"
+                      >
+                        <span class="button-text">Send Message</span>
+                        <span
+                          class="spinner-border spinner-border-sm d-none"
+                          role="status"
+                          aria-hidden="true"
+                        ></span>
+                      </button>
+                    </form>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    
-        <!-- Toast Notification -->
-        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-            <div id="emailNotification" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-header">
-                    <strong class="me-auto" id="toastTitle">Notification</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body" id="toastMessage">
-                </div>
-            </div>
+      </div>
+
+      <!-- Toast Notification -->
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div
+          id="emailNotification"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <strong class="me-auto" id="toastTitle">Notification</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body" id="toastMessage"></div>
         </div>
-    
-        <style>
-            /* Previous styles remain the same */
-    
-            .toast {
-                background: white;
-                border-radius: 0.5rem;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            }
-    
-            .toast.success .toast-header {
-                background-color: #d1fae5;
-                color: #065f46;
-            }
-    
-            .toast.error .toast-header {
-                background-color: #fee2e2;
-                color: #991b1b;
-            }
-    
-            #submitBtn:disabled {
-                cursor: not-allowed;
-                opacity: 0.7;
-            }
-        </style>
-    
-        <!-- Add EmailJS SDK -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    
-        <script>
-            (function() {
-                // Initialize EmailJS with your public key
-                emailjs.init("YOUR_PUBLIC_KEY");
-    
-                const form = document.getElementById('contactForm');
-                const submitBtn = document.getElementById('submitBtn');
-                const buttonText = submitBtn.querySelector('.button-text');
-                const spinner = submitBtn.querySelector('.spinner-border');
-                const toast = new bootstrap.Toast(document.getElementById('emailNotification'));
-    
-                function showNotification(success, message) {
-                    const toastElement = document.getElementById('emailNotification');
-                    const toastTitle = document.getElementById('toastTitle');
-                    const toastMessage = document.getElementById('toastMessage');
-    
-                    toastElement.className = 'toast ' + (success ? 'success' : 'error');
-                    toastTitle.textContent = success ? 'Success!' : 'Error';
-                    toastMessage.textContent = message;
-                    toast.show();
-                }
-    
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Disable button and show spinner
-                    submitBtn.disabled = true;
-                    buttonText.textContent = 'Sending...';
-                    spinner.classList.remove('d-none');
-    
-                    // Send the email using EmailJS
-                    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-                        .then(() => {
-                            showNotification(true, 'Your message has been sent successfully!');
-                            form.reset();
-                        })
-                        .catch((error) => {
-                            showNotification(false, 'There was an error sending your message. Please try again.');
-                            console.error('EmailJS Error:', error);
-                        })
-                        .finally(() => {
-                            // Re-enable button and hide spinner
-                            submitBtn.disabled = false;
-                            buttonText.textContent = 'Send Message';
-                            spinner.classList.add('d-none');
-                        });
-                });
-            })();
-        </script>
+      </div>
+
+      <style>
+        /* Previous styles remain the same */
+
+        .toast {
+          background: white;
+          border-radius: 0.5rem;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .toast.success .toast-header {
+          background-color: #d1fae5;
+          color: #065f46;
+        }
+
+        .toast.error .toast-header {
+          background-color: #fee2e2;
+          color: #991b1b;
+        }
+
+        #submitBtn:disabled {
+          cursor: not-allowed;
+          opacity: 0.7;
+        }
+      </style>
+
+      <!-- Add EmailJS SDK -->
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+      ></script>
+
+      <script>
+        (function () {
+          // Initialize EmailJS with your public key
+          emailjs.init("YOUR_PUBLIC_KEY");
+
+          const form = document.getElementById("contactForm");
+          const submitBtn = document.getElementById("submitBtn");
+          const buttonText = submitBtn.querySelector(".button-text");
+          const spinner = submitBtn.querySelector(".spinner-border");
+          const toast = new bootstrap.Toast(
+            document.getElementById("emailNotification")
+          );
+
+          function showNotification(success, message) {
+            const toastElement = document.getElementById("emailNotification");
+            const toastTitle = document.getElementById("toastTitle");
+            const toastMessage = document.getElementById("toastMessage");
+
+            toastElement.className = "toast " + (success ? "success" : "error");
+            toastTitle.textContent = success ? "Success!" : "Error";
+            toastMessage.textContent = message;
+            toast.show();
+          }
+
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Disable button and show spinner
+            submitBtn.disabled = true;
+            buttonText.textContent = "Sending...";
+            spinner.classList.remove("d-none");
+
+            // Send the email using EmailJS
+            emailjs
+              .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+              .then(() => {
+                showNotification(
+                  true,
+                  "Your message has been sent successfully!"
+                );
+                form.reset();
+              })
+              .catch((error) => {
+                showNotification(
+                  false,
+                  "There was an error sending your message. Please try again."
+                );
+                console.error("EmailJS Error:", error);
+              })
+              .finally(() => {
+                // Re-enable button and hide spinner
+                submitBtn.disabled = false;
+                buttonText.textContent = "Send Message";
+                spinner.classList.add("d-none");
+              });
+          });
+        })();
+      </script>
     </section>
 
     <style>
@@ -1670,154 +1814,156 @@
       </div>
     </section>
     <script>
-        // Form Security
-        document.addEventListener('DOMContentLoaded', function() {
-            // Anti-spam measures for contact form
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                // Add honeypot field
-                const honeyPotInput = document.createElement('input');
-                honeyPotInput.type = 'text';
-                honeyPotInput.name = 'bot-field';
-                honeyPotInput.style.display = 'none';
-                contactForm.appendChild(honeyPotInput);
-        
-                // Rate limiting
-                let lastSubmissionTime = 0;
-                const SUBMISSION_COOLDOWN = 30000; // 30 seconds
-        
-                // Form sanitization and validation
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-        
-                    // Check honeypot
-                    if (honeyPotInput.value) {
-                        console.log('Bot detected');
-                        return false;
-                    }
-        
-                    // Rate limiting check
-                    const now = Date.now();
-                    if (now - lastSubmissionTime < SUBMISSION_COOLDOWN) {
-                        showNotification(false, 'Please wait before submitting again.');
-                        return false;
-                    }
-        
-                    // Sanitize inputs
-                    const formData = new FormData(contactForm);
-                    for (let [key, value] of formData.entries()) {
-                        // Basic XSS prevention
-                        formData.set(key, sanitizeInput(value));
-                    }
-        
-                    // Validate email
-                    const email = formData.get('reply_to');
-                    if (!isValidEmail(email)) {
-                        showNotification(false, 'Please enter a valid email address.');
-                        return false;
-                    }
-        
-                    lastSubmissionTime = now;
-                    // Continue with form submission...
-                });
+      // Form Security
+      document.addEventListener("DOMContentLoaded", function () {
+        // Anti-spam measures for contact form
+        const contactForm = document.getElementById("contactForm");
+        if (contactForm) {
+          // Add honeypot field
+          const honeyPotInput = document.createElement("input");
+          honeyPotInput.type = "text";
+          honeyPotInput.name = "bot-field";
+          honeyPotInput.style.display = "none";
+          contactForm.appendChild(honeyPotInput);
+
+          // Rate limiting
+          let lastSubmissionTime = 0;
+          const SUBMISSION_COOLDOWN = 30000; // 30 seconds
+
+          // Form sanitization and validation
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Check honeypot
+            if (honeyPotInput.value) {
+              console.log("Bot detected");
+              return false;
             }
-        });
-        
-        // Input sanitization function
-        function sanitizeInput(input) {
-            return input
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#x27;')
-                .replace(/\//g, '&#x2F;');
-        }
-        
-        // Email validation function
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-        
-        // Add CSRF protection
-        function addCSRFToken() {
-            const token = generateRandomToken();
-            sessionStorage.setItem('csrfToken', token);
-            return token;
-        }
-        
-        function generateRandomToken() {
-            return Array.from(crypto.getRandomValues(new Uint8Array(32)))
-                .map(b => b.toString(16).padStart(2, '0'))
-                .join('');
-        }
-        
-        // Protect against clickjacking
-        if (window.self === window.top) {
-            // Page is not in an iframe
-            document.addEventListener('DOMContentLoaded', function() {
-                const style = document.createElement('style');
-                style.innerHTML = 'body { display: block !important; }';
-                document.head.appendChild(style);
-            });
-        } else {
-            // Block if loaded in iframe
-            document.body.innerHTML = 'This content cannot be displayed in an iframe.';
-        }
-        
-        // Input validation for all forms
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', function(e) {
-                const inputs = form.querySelectorAll('input, textarea');
-                inputs.forEach(input => {
-                    // Remove potentially harmful characters
-                    input.value = input.value.replace(/<[^>]*>/g, '');
-                });
-            });
-        });
-        
-        // Protect against data leakage
-        document.addEventListener('copy', function(e) {
-            const selection = document.getSelection();
-            if (selection.toString().includes('sensitive')) {
-                e.preventDefault();
+
+            // Rate limiting check
+            const now = Date.now();
+            if (now - lastSubmissionTime < SUBMISSION_COOLDOWN) {
+              showNotification(false, "Please wait before submitting again.");
+              return false;
             }
-        });
-        
-        // Disable right-click on sensitive content
-        document.querySelectorAll('.sensitive-content').forEach(el => {
-            el.addEventListener('contextmenu', e => e.preventDefault());
-        });
-        
-        // Add security headers dynamically
-        function addSecurityHeaders() {
-            const meta = document.createElement('meta');
-            meta.httpEquiv = 'Content-Security-Policy';
-            meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;";
-            document.head.appendChild(meta);
-        }
-        
-        // Protect against XSS in URL parameters
-        function sanitizeURLParams() {
-            const urlParams = new URLSearchParams(window.location.search);
-            for (let [key, value] of urlParams) {
-                if (value.includes('<') || value.includes('>')) {
-                    urlParams.set(key, sanitizeInput(value));
-                }
+
+            // Sanitize inputs
+            const formData = new FormData(contactForm);
+            for (let [key, value] of formData.entries()) {
+              // Basic XSS prevention
+              formData.set(key, sanitizeInput(value));
             }
+
+            // Validate email
+            const email = formData.get("reply_to");
+            if (!isValidEmail(email)) {
+              showNotification(false, "Please enter a valid email address.");
+              return false;
+            }
+
+            lastSubmissionTime = now;
+            // Continue with form submission...
+          });
         }
-        
-        // Initialize all security measures
-        function initSecurity() {
-            addSecurityHeaders();
-            sanitizeURLParams();
-            addCSRFToken();
+      });
+
+      // Input sanitization function
+      function sanitizeInput(input) {
+        return input
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#x27;")
+          .replace(/\//g, "&#x2F;");
+      }
+
+      // Email validation function
+      function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      // Add CSRF protection
+      function addCSRFToken() {
+        const token = generateRandomToken();
+        sessionStorage.setItem("csrfToken", token);
+        return token;
+      }
+
+      function generateRandomToken() {
+        return Array.from(crypto.getRandomValues(new Uint8Array(32)))
+          .map((b) => b.toString(16).padStart(2, "0"))
+          .join("");
+      }
+
+      // Protect against clickjacking
+      if (window.self === window.top) {
+        // Page is not in an iframe
+        document.addEventListener("DOMContentLoaded", function () {
+          const style = document.createElement("style");
+          style.innerHTML = "body { display: block !important; }";
+          document.head.appendChild(style);
+        });
+      } else {
+        // Block if loaded in iframe
+        document.body.innerHTML =
+          "This content cannot be displayed in an iframe.";
+      }
+
+      // Input validation for all forms
+      document.querySelectorAll("form").forEach((form) => {
+        form.addEventListener("submit", function (e) {
+          const inputs = form.querySelectorAll("input, textarea");
+          inputs.forEach((input) => {
+            // Remove potentially harmful characters
+            input.value = input.value.replace(/<[^>]*>/g, "");
+          });
+        });
+      });
+
+      // Protect against data leakage
+      document.addEventListener("copy", function (e) {
+        const selection = document.getSelection();
+        if (selection.toString().includes("sensitive")) {
+          e.preventDefault();
         }
-        
-        // Call security initialization
-        initSecurity();
-        </script>
+      });
+
+      // Disable right-click on sensitive content
+      document.querySelectorAll(".sensitive-content").forEach((el) => {
+        el.addEventListener("contextmenu", (e) => e.preventDefault());
+      });
+
+      // Add security headers dynamically
+      function addSecurityHeaders() {
+        const meta = document.createElement("meta");
+        meta.httpEquiv = "Content-Security-Policy";
+        meta.content =
+          "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;";
+        document.head.appendChild(meta);
+      }
+
+      // Protect against XSS in URL parameters
+      function sanitizeURLParams() {
+        const urlParams = new URLSearchParams(window.location.search);
+        for (let [key, value] of urlParams) {
+          if (value.includes("<") || value.includes(">")) {
+            urlParams.set(key, sanitizeInput(value));
+          }
+        }
+      }
+
+      // Initialize all security measures
+      function initSecurity() {
+        addSecurityHeaders();
+        sanitizeURLParams();
+        addCSRFToken();
+      }
+
+      // Call security initialization
+      initSecurity();
+    </script>
 
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
