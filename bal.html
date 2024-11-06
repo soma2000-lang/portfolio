@@ -155,7 +155,6 @@
         </div>
       </div>
     </nav>
-
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container text-center">
@@ -192,6 +191,100 @@
         </div>
       </div>
     </section>
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="profile-image-container text-center">
+                        <div class="image-wrapper">
+                            <!-- Using a placeholder image since external images aren't allowed -->
+                            <img src="image.png" alt="Somasree Majumder" class="profile-image rounded-circle img-fluid shadow" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="profile-content">
+                        <h2 class="mb-4">About Me</h2>
+                        <p class="lead mb-4">
+                            Passionate Software Engineer and Machine Learning Engineer with a strong foundation in full-stack development and deep learning technologies.
+                        </p>
+                        <div class="bio-details">
+                            <p class="mb-4">
+                                I'm a Software Engineer at Deloitte with expertise in backend development and machine learning. With a background in Electronics and Communication Engineering, I've developed a unique perspective that combines hardware understanding with software expertise. I specialize in building scalable backend systems, implementing machine learning solutions, and developing efficient algorithms.
+                            </p>
+                            <p class="mb-4">
+                                My experience spans across various domains including full-stack development, deep learning, and system design. I'm particularly interested in solving complex problems at scale and contributing to open-source projects. As an active member of the tech community, I've contributed to major projects including PyTorch, Hugging Face Transformers, and Keras.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <style>
+            .profile-image-container {
+                position: relative;
+                padding: 1rem;
+            }
+    
+            .image-wrapper {
+                position: relative;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+    
+            .profile-image {
+                width: 100%;
+                height: auto;
+                border: 4px solid white;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+    
+            .image-wrapper:hover .profile-image {
+                transform: scale(1.02);
+            }
+    
+            .profile-content {
+                padding: 1rem;
+            }
+    
+            .bio-details {
+                color: #4b5563;
+                line-height: 1.8;
+            }
+    
+            .quick-info .info-item {
+                padding: 0.75rem;
+                background: #f8f9fa;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+    
+            .quick-info .info-item:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            }
+    
+            .info-item i {
+                font-size: 1.1rem;
+                width: 24px;
+            }
+    
+            @media (max-width: 768px) {
+                .profile-content {
+                    text-align: center;
+                }
+    
+                .quick-info {
+                    justify-content: center;
+                }
+            }
+        </style>
+    </section>
+    
     <section id="projects" class="py-5">
       <div class="container">
         <h2 class="text-center mb-5">Projects</h2>
@@ -745,6 +838,37 @@
             </div>
 
             <style>
+              .implementation-details {
+                background: white;
+                padding: 1rem;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+              }
+
+              .project-status {
+                border-left: 4px solid white;
+              }
+
+              .status-list {
+                list-style: none;
+                padding-left: 0;
+                margin-bottom: 0;
+              }
+
+              .status-list li {
+                position: relative;
+                padding-left: 1.5rem;
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+              }
+
+              .status-list li::before {
+                content: "✓";
+                color: white;
+                position: absolute;
+                left: 0;
+              }
+
               .tech-badges {
                 display: flex;
                 flex-wrap: wrap;
@@ -808,6 +932,24 @@
                 margin-top: 1rem;
               }
 
+              .github-link {
+                display: inline-flex;
+                align-items: center;
+                padding: 0.75rem 1.5rem;
+                background: #4f46e5;
+                color: white;
+                border-radius: 8px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                font-weight: 500;
+              }
+
+              .github-link:hover {
+                background: #4338ca;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+              }
+
               @media (max-width: 768px) {
                 .features-grid {
                   grid-template-columns: 1fr;
@@ -820,114 +962,7 @@
             </style>
           </div>
 
-          <div class="col-md-6 mb-4">
-            <div class="project-card">
-                <div class="card-body">
-                    <div class="project-content">
-                        <h3 class="project-title">
-                            <i class="fas fa-code-branch me-2 text-primary"></i>
-                            Custom Compiler Implementation
-                        </h3>
-                        <p class="project-description">
-                            A sophisticated compiler project implementing lexical analysis, parsing, semantic analysis, and code generation. Features error handling, symbol table management, and intermediate code optimization.
-                        </p>
-        
-                        <div class="feature-grid mb-4">
-                            <div class="feature-category">
-                                <h5 class="feature-title">
-                                    <i class="fas fa-microchip me-2 text-primary"></i>
-                                    Core Components
-                                </h5>
-                                <ul class="feature-list">
-                                    <li>Lexical analyzer (Scanner)</li>
-                                    <li>Syntax Parser</li>
-                                    <li>Semantic Analyzer</li>
-                                    <li>Code Generator</li>
-                                </ul>
-                            </div>
-                            <div class="feature-category">
-                                <h5 class="feature-title">
-                                    <i class="fas fa-tools me-2 text-primary"></i>
-                                    Key Features
-                                </h5>
-                                <ul class="feature-list">
-                                    <li>Symbol table management</li>
-                                    <li>Error detection & recovery</li>
-                                    <li>Intermediate code generation</li>
-                                    <li>Optimization techniques</li>
-                                </ul>
-                            </div>
-                        </div>
-        
-                        <div class="feature-grid mb-4">
-                            <div class="feature-category">
-                                <h5 class="feature-title">
-                                    <i class="fas fa-clipboard-check me-2 text-primary"></i>
-                                    Implementation Details
-                                </h5>
-                                <ul class="feature-list">
-                                    <li>Regular expressions for lexical analysis</li>
-                                    <li>Context-free grammar parsing</li>
-                                    <li>Abstract Syntax Tree (AST) generation</li>
-                                    <li>Type checking and validation</li>
-                                </ul>
-                            </div>
-                            <div class="feature-category">
-                                <h5 class="feature-title">
-                                    <i class="fas fa-cog me-2 text-primary"></i>
-                                    Advanced Features
-                                </h5>
-                                <ul class="feature-list">
-                                    <li>Constant folding optimization</li>
-                                    <li>Dead code elimination</li>
-                                    <li>Control flow analysis</li>
-                                    <li>Memory allocation handling</li>
-                                </ul>
-                            </div>
-                        </div>
-        
-                        <div class="tech-stack mb-4">
-                            <div class="tech-badge">
-                                <i class="fas fa-code me-1"></i>C++
-                            </div>
-                            <div class="tech-badge">
-                                <i class="fas fa-file-code me-1"></i>Flex
-                            </div>
-                            <div class="tech-badge">
-                                <i class="fas fa-file-alt me-1"></i>Bison
-                            </div>
-                            <div class="tech-badge">
-                                <i class="fas fa-project-diagram me-1"></i>LLVM
-                            </div>
-                        </div>
-        
-                        <div class="project-status mb-4">
-                            <div class="feature-category">
-                                <h5 class="feature-title">
-                                    <i class="fas fa-chart-line me-2 text-primary"></i>
-                                    Project Highlights
-                                </h5>
-                                <ul class="feature-list">
-                                    <li>Successfully handles complex language constructs</li>
-                                    <li>Efficient error reporting system</li>
-                                    <li>Optimized code generation</li>
-                                    <li>Comprehensive test suite</li>
-                                </ul>
-                            </div>
-                        </div>
-        
-                        <div class="project-links d-flex gap-3">
-                            <a href="https://github.com/soma2000-lang/Compiler" class="btn btn-primary github-link">
-                                <i class="fab fa-github me-2"></i>View Source
-                            </a>
-                            <a href="#documentation" class="btn btn-outline-primary docs-link">
-                                <i class="fas fa-book me-2"></i>Documentation
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
           <div class="col-md-6">
             <div class="card h-100 project-card" onclick="toggleProject(this)">
               <div class="card-body">
@@ -1199,19 +1234,19 @@
                   Multiple Certifications in
                   <div class="d-flex flex-wrap gap-2">
                     <a
-                      href="https://www.coursera.org/verify/specialization/NLP"
+                      href="https://docs.google.com/document/d/1pgCf1Quv9ulZPqEigcJUgbhTmRwv_ePW6Gh43l44BbM/edit?usp=sharing"
                       class="achievement-link"
                     >
                       <span class="highlight">NLP</span> </a
                     >,
                     <a
-                      href="https://www.coursera.org/verify/specialization/CNN"
+                      href="https://docs.google.com/document/d/1pgCf1Quv9ulZPqEigcJUgbhTmRwv_ePW6Gh43l44BbM/edit?usp=sharing"
                       class="achievement-link"
                     >
                       <span class="highlight">CNN</span> </a
                     >, and
                     <a
-                      href="https://www.coursera.org/verify/specialization/DNN"
+                      href="https://docs.google.com/document/d/1pgCf1Quv9ulZPqEigcJUgbhTmRwv_ePW6Gh43l44BbM/edit?usp=sharing"
                       class="achievement-link"
                     >
                       <span class="highlight">Deep Neural Networks</span>
