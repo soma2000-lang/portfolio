@@ -31,7 +31,7 @@
     />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>Somasree Majumder -ML Engineer+Backend Developer</title>
+    <title>Somasree Majumder - Full Stack ML Engineer</title>
 
     <link
       rel="stylesheet"
@@ -44,111 +44,6 @@
       rel="stylesheet"
     />
     <style>
-      :root {
-        --bs-primary: #4f46e5;
-        --bs-primary-rgb: 79, 70, 229;
-      }
-
-      .hero-section {
-        background: linear-gradient(135deg, #4f46e5, #7c3aed);
-        padding: 6rem 0;
-        color: white;
-      }
-      .download-resume-btn {
-        background: rgba(255, 255, 255, 0.9);
-        color: #4f46e5;
-        border: 2px solid rgba(255, 255, 255, 0.9);
-        padding: 0.75rem 2rem;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .download-resume-btn:hover {
-        background: #ffffff;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-      }
-
-      .social-icon {
-        color: white;
-        font-size: 1.8rem;
-        margin: 0 10px;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(5px);
-      }
-
-      .social-icon:hover {
-        transform: translateY(-5px);
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      /* Specific icon hover colors */
-      .social-icon.linkedin:hover {
-        color: #0077b5;
-      }
-
-      .social-icon.github:hover {
-        color: #333;
-      }
-
-      .social-icon.kaggle:hover {
-        color: #20beff;
-      }
-
-      .social-icon.medium:hover {
-        color: #00ab6c;
-      }
-
-      .social-icon.email:hover {
-        color: #ea4335;
-      }
-      .download-resume-btn i {
-        transition: transform 0.3s ease;
-      }
-
-      .download-resume-btn:hover i {
-        transform: translateY(-1px);
-      }
-
-      /* Ensure proper spacing in mobile view */
-      @media (max-width: 768px) {
-        .download-resume-btn {
-          padding: 0.5rem 1.5rem;
-          font-size: 1rem;
-        }
-      }
-
-      .nav-link {
-        color: #1e293b;
-        font-weight: 500;
-        transition: color 0.3s;
-      }
-
-      .nav-link:hover {
-        color: var(--bs-primary);
-      }
-
-      .social-icon {
-        color: white;
-        font-size: 1.5rem;
-        transition: transform 0.3s;
-      }
-      .project-card {
-        cursor: pointer;
-        transition: transform 0.3s, box-shadow 0.3s;
-        overflow: hidden;
-      }
       :root {
         --bs-primary: #4f46e5;
         --bs-primary-rgb: 79, 70, 229;
@@ -274,33 +169,48 @@
 
       .social-icon {
         color: rgba(255, 255, 255, 0.8);
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        margin: 0 10px;
         transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
       }
 
       .social-icon:hover {
-        color: #fff;
         transform: translateY(-5px) scale(1.2);
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       }
 
-      /* Glowing effect for important elements */
-      .project-card:hover {
-        box-shadow: 0 0 30px rgba(79, 70, 229, 0.3);
+      /* Specific icon hover colors */
+      .social-icon.linkedin:hover {
+        color: #0077b5;
       }
 
-      /* Smooth scrolling */
-      html {
-        scroll-behavior: smooth;
+      .social-icon.github:hover {
+        color: #333;
       }
 
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
+      .social-icon.kaggle:hover {
+        color: #20beff;
       }
 
-      ::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.1);
+      .social-icon.medium:hover {
+        color: #00ab6c;
       }
+
+      .social-icon.email:hover {
+        color: #ea4335;
+      }
+
       #education .card {
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
@@ -324,12 +234,20 @@
         color: #000;
       }
 
-      /* Added hover effect for education card */
       #education .card:hover {
         transform: translateY(-5px);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         background: rgba(255, 255, 255, 1);
       }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
       ::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 255, 0.2);
         border-radius: 5px;
@@ -339,14 +257,16 @@
         background: rgba(255, 255, 255, 0.3);
       }
 
-      /* Text improvements */
       .card-title, h1, h2, h3, h4, h5, h6 {
         color: #fff;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
+
       #projects h2,
       #experience h2,
-      #education h2 {
+      #education h2,
+      #publications h2,
+      #achievements h2 {
         color: #000;
         text-shadow: none;
         background: rgba(255, 255, 255, 0.95);
@@ -371,7 +291,6 @@
         color: #333;
       }
 
-      /* Updated Experience Section */
       #experience .text-primary {
         color: #000 !important;
         font-weight: 600;
@@ -389,11 +308,10 @@
         color: #666 !important;
       }
 
-      #experience p {
+      #experience p, #experience li {
         color: #333;
       }
 
-      /* Updated Publications Section */
       #publications {
         background: rgba(255, 255, 255, 0.95) !important;
       }
@@ -434,57 +352,10 @@
         box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
       }
 
-      /* Enhanced Section Title Styling */
-      .section-title {
-        position: relative;
-        display: inline-block;
-      }
-
-      .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(90deg, #4f46e5, transparent);
-      }
-
-      /* Improved Card Hover Effects */
-      .card {
-        transition: all 0.3s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Enhanced Text Readability */
-      p, li, .card-text {
-        line-height: 1.7;
-      }
-
-      /* Improved Mobile Responsiveness */
-      @media (max-width: 768px) {
-        #projects h2,
-        #experience h2,
-        #publications h2,
-        #education h2 {
-          font-size: 1.75rem;
-          padding: 10px 20px;
-        }
-
-        .card {
-          margin-bottom: 1rem;
-        }
-      }
-
       .card-text {
         color: rgba(255, 255, 255, 0.8);
       }
 
-      /* Section transitions */
       section {
         opacity: 0;
         transform: translateY(20px);
@@ -494,6 +365,12 @@
       section.visible {
         opacity: 1;
         transform: translateY(0);
+      }
+
+      .project-card {
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        overflow: hidden;
       }
 
       .project-card:hover {
@@ -509,7 +386,7 @@
       }
 
       .project-card.expanded .project-details {
-        max-height: 500px;
+        max-height: 2000px;
         transition: max-height 0.5s ease-in;
       }
 
@@ -525,30 +402,40 @@
       .github-link {
         color: #4f46e5;
         text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        background: #4f46e5;
+        color: white;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-weight: 500;
       }
 
       .github-link:hover {
-        text-decoration: underline;
+        background: #4338ca;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
       }
 
-      .social-icon:hover {
-        transform: translateY(-3px);
+      html {
+        scroll-behavior: smooth;
       }
 
-      .skill-card {
-        transition: transform 0.3s;
-      }
+      @media (max-width: 768px) {
+        #projects h2,
+        #experience h2,
+        #publications h2,
+        #education h2,
+        #achievements h2 {
+          font-size: 1.75rem;
+          padding: 10px 20px;
+        }
 
-      .skill-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .project-card {
-        transition: transform 0.3s;
-      }
-
-      .project-card:hover {
-        transform: translateY(-5px);
+        .download-resume-btn {
+          padding: 0.5rem 1.5rem;
+          font-size: 1rem;
+        }
       }
     </style>
   </head>
@@ -583,18 +470,22 @@
             <li class="nav-item">
               <a class="nav-link" href="#publications">Publications</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#achievements">Achievements</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="hero-section">
       <div class="container text-center">
         <h1 class="display-4 fw-bold mb-3">Somasree Majumder</h1>
-        <p class="lead mb-4">Backend Developer+Machine Learning Engineer</p>
+        <p class="lead mb-4">Full Stack Machine Learning Engineer | AI/ML Specialist</p>
         <div class="mb-4">
           <a
-            href="Somasre_Final_CV.pdf"
+            href="Somasree_ML-2.pdf"
             download
             class="btn btn-light btn-lg download-resume-btn"
           >
@@ -635,7 +526,7 @@
             <i class="fab fa-medium-m"></i>
           </a>
           <a 
-            href="mailto:bishnupadamajumder32@gmail.com" 
+            href="mailto:seckroll16@gmail.com" 
             class="social-icon email"
             aria-label="Email"
           >
@@ -645,13 +536,13 @@
       </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="py-5">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-4 mb-4 mb-md-0">
             <div class="profile-image-container text-center">
               <div class="image-wrapper">
-                <!-- Using a placeholder image since external images aren't allowed -->
                 <img
                   src="image.png"
                   alt="Somasree Majumder"
@@ -664,27 +555,17 @@
             <div class="profile-content">
               <h2 class="mb-4">About Me</h2>
               <p class="lead mb-4">
-                Passionate Software Engineer and Machine Learning Engineer with
-                a strong foundation in full-stack development and deep learning
-                technologies.
+                Full Stack Machine Learning Engineer specializing in computer vision, deep learning, and scalable AI solutions.
               </p>
               <div class="bio-details">
                 <p class="mb-4">
-                  I'm a Software Engineer at Deloitte with expertise in backend
-                  development and machine learning. With a background in
-                  Electronics and Communication Engineering, I've developed a
-                  unique perspective that combines hardware understanding with
-                  software expertise. I specialize in building scalable backend
-                  systems, implementing machine learning solutions, and
-                  developing efficient algorithms.
+                  I'm currently a Full Stack ML Engineer at DeepEdge, where I develop cutting-edge anti-UAV quadcopter tracking systems with advanced object detection and tracking algorithms. With expertise spanning from YOLOv8 to Kalman filters and infrared thermal optimization, I've achieved over 50% performance improvements in challenging defense applications.
                 </p>
                 <p class="mb-4">
-                  My experience spans across various domains including
-                  full-stack development, deep learning, and system design. I'm
-                  particularly interested in solving complex problems at scale
-                  and contributing to open-source projects. As an active member
-                  of the tech community, I've contributed to major projects
-                  including PyTorch, Hugging Face Transformers, and Keras.
+                  Previously at Deloitte, I architected multilingual RAG pipelines, built recommendation systems achieving 90% accuracy, and deployed scalable AI solutions using FastAPI and Docker. My experience also includes contributing to major open-source ML frameworks like PyTorch Lightning, Hugging Face Transformers, KerasCV, and KerasNLP.
+                </p>
+                <p class="mb-4">
+                  As a published researcher in Homomorphic Encryption and ML in Medicine, Top 10 finalist at Challang Hackathon, and LiFT Scholar 2022 (Top 500 worldwide), I combine academic rigor with practical engineering to solve real-world problems through AI/ML technologies.
                 </p>
               </div>
             </div>
@@ -721,880 +602,224 @@
         }
 
         .bio-details {
-          color: #4b5563;
+          color: #e5e7eb;
           line-height: 1.8;
-        }
-
-        .quick-info .info-item {
-          padding: 0.75rem;
-          background: #f8f9fa;
-          border-radius: 8px;
-          display: flex;
-          align-items: center;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .quick-info .info-item:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .info-item i {
-          font-size: 1.1rem;
-          width: 24px;
         }
 
         @media (max-width: 768px) {
           .profile-content {
             text-align: center;
           }
-
-          .quick-info {
-            justify-content: center;
-          }
         }
       </style>
     </section>
 
-    <section id="projects" class="py-5">
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
       <div class="container">
-        <h2 class="text-center mb-5">Projects</h2>
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">Memcached server</h4>
-                  <p class="card-text">
-                    Custom implementation of a Memcached server
-                  </p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    Tech stack used in this project: JavaScript,Typescript
-                  </p>
-                  <a
-                    href="https://github.com/soma2000-lang/Coding-challenges/tree/master/Write%20Your%20own%20Memcached%20Server"
-                    class="github-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github me-2"></i>View on GitHub
-                  </a>
-                </div>
+        <h2 class="text-center mb-5">Technical Skills</h2>
+        
+        <!-- Programming Languages -->
+        <div class="mb-5">
+          <h4 class="text-center mb-4">Programming Languages</h4>
+          <div class="row g-3">
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">Python</div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">Memcached Server</h4>
-                  <p class="card-text">
-                    Amazon Hackathon project focused on product classification
-                    using ALBERT models.
-                  </p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    Utilized ALBERT models and implemented ensemble technique to
-                    enhance accuracy by 10%. Employed synthetic optimized
-                    PyTorch datasets for improved performance.
-                  </p>
-                  <a
-                    href="https://github.com/soma2000-lang/Amazon-Product-CLassiication"
-                    class="github-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github me-2"></i>View on GitHub
-                  </a>
-                </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">JavaScript</div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">Big Small Data Analytics</h4>
-                  <p class="card-text">
-                    Probabilistic data structures that can process and search
-                    very large amount of data super fast, with little loss of
-                    accuracy..
-                  </p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    A comprehensive data analytics solution that handles both
-                    big and small data processing:
-                  </p>
-                  <ul class="mb-3">
-                    <li>Implements the following alogorithms</li>
-                    <li>
-                      MinHash LSH MinHash, Weighted MinHash Jaccard Threshold
-                      MinHash LSH Forest MinHash
-                    </li>
-                  </ul>
-                  <a
-                    href="https://github.com/soma2000-lang/Big_Small_Data"
-                    class="github-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github me-2"></i>View on GitHub
-                  </a>
-                </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">TypeScript</div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">Django Food Delivery Platform</h4>
-                  <p class="card-text">
-                    Full-stack multi-vendor food delivery platform with advanced
-                    features including real-time order tracking, payment
-                    integration, and location-based services.
-                  </p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    A comprehensive food delivery platform built with Django,
-                    featuring:
-                  </p>
-                  <div class="features-grid">
-                    <div class="feature-category">
-                      <h5 class="feature-title">Core Features</h5>
-                      <ul class="feature-list">
-                        <li>Asynchronous shopping basket functionality</li>
-                        <li>Integrated Razorpay and PayPal payment gateways</li>
-                        <li>PostgreSQL database integration</li>
-                        <li>Custom user authentication framework</li>
-                        <li>Automated email notifications system</li>
-                      </ul>
-                    </div>
-
-                    <div class="feature-category">
-                      <h5 class="feature-title">Vendor Management</h5>
-                      <ul class="feature-list">
-                        <li>Vendor registration and authentication system</li>
-                        <li>Admin review interface for vendor approval</li>
-                        <li>Custom vendor control panels</li>
-                        <li>Restaurant profile management</li>
-                        <li>Menu and food item CRUD operations</li>
-                      </ul>
-                    </div>
-
-                    <div class="feature-category">
-                      <h5 class="feature-title">User Experience</h5>
-                      <ul class="feature-list">
-                        <li>Google Maps integration for address suggestions</li>
-                        <li>Location-based restaurant search</li>
-                        <li>Advanced search capabilities</li>
-                        <li>Streamlined checkout process</li>
-                        <li>Real-time order tracking</li>
-                      </ul>
-                    </div>
-
-                    <div class="feature-category">
-                      <h5 class="feature-title">Technical Highlights</h5>
-                      <ul class="feature-list">
-                        <li>Django event triggers implementation</li>
-                        <li>Dynamic tax calculation system</li>
-                        <li>Custom order management workflow</li>
-                        <li>Email template integration</li>
-                        <li>Responsive design implementation</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="mt-3">
-                    <a
-                      href="https://github.com/soma2000-lang/Django-food-app"
-                      class="github-link"
-                      target="_blank"
-                    >
-                      <i class="fab fa-github me-2"></i>View on GitHub
-                    </a>
-                  </div>
-                </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">C++</div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">
-                    LazaOS - Operating System Development
-                  </h4>
-                  <p class="card-text">
-                    A custom operating system implementation focusing on
-                    fundamental OS concepts and low-level system programming.
-                  </p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    An educational operating system project demonstrating core
-                    OS concepts:
-                  </p>
-                  <div class="features-grid">
-                    <div class="feature-category">
-                      <h5 class="feature-title">Kernel Development</h5>
-                      <ul class="feature-list">
-                        <li>Bootloader implementation in Assembly</li>
-                        <li>Memory management and paging</li>
-                        <li>Interrupt handling system</li>
-                        <li>Process scheduling</li>
-                        <li>System call interface</li>
-                      </ul>
-                    </div>
-
-                    <div class="feature-category">
-                      <h5 class="feature-title">Device Management</h5>
-                      <ul class="feature-list">
-                        <li>Device driver architecture</li>
-                        <li>Keyboard input handling</li>
-                        <li>Display output management</li>
-                        <li>Basic I/O operations</li>
-                        <li>Hardware abstraction layer</li>
-                      </ul>
-                    </div>
-
-                    <div class="feature-category">
-                      <h5 class="feature-title">File System</h5>
-                      <ul class="feature-list">
-                        <li>Basic file system implementation</li>
-                        <li>File operations (read/write)</li>
-                        <li>Directory structure</li>
-                        <li>File descriptors</li>
-                        <li>Storage management</li>
-                      </ul>
-                    </div>
-
-                    <div class="feature-category">
-                      <h5 class="feature-title">System Features</h5>
-                      <ul class="feature-list">
-                        <li>Multi-tasking support</li>
-                        <li>Memory protection</li>
-                        <li>User/kernel mode separation</li>
-                        <li>Basic shell implementation</li>
-                        <li>Error handling system</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="implementation-details mt-4">
-                    <h5 class="feature-title">Technical Implementation</h5>
-                    <ul class="feature-list">
-                      <li>Written in C++ and x86 Assembly</li>
-                      <li>GRUB bootloader integration</li>
-                      <li>Custom build system and toolchain</li>
-                      <li>QEMU/Bochs emulator support</li>
-                    </ul>
-                  </div>
-
-                  <div class="tech-badges mt-3 mb-3">
-                    <span class="badge bg-danger">Assembly</span>
-                    <span class="badge bg-primary">C++</span>
-                    <span class="badge bg-secondary">OS Development</span>
-                    <span class="badge bg-success">Kernel Programming</span>
-                    <span class="badge bg-info">System Architecture</span>
-                    <span class="badge bg-warning text-dark"
-                      >Low-level Programming</span
-                    >
-                  </div>
-
-                  <div class="project-status mt-3 p-3 bg-light rounded">
-                    <h6 class="mb-2 text-primary">Project Highlights:</h6>
-                    <ul class="status-list">
-                      <li>
-                        Successfully implemented basic kernel functionality
-                      </li>
-                      <li>Developed custom bootloader and memory management</li>
-                      <li>Created working file system implementation</li>
-                      <li>Implemented basic shell interface</li>
-                    </ul>
-                  </div>
-
-                  <div class="mt-3">
-                    <a
-                      href="https://github.com/soma2000-lang/LazaOS"
-                      class="github-link"
-                      target="_blank"
-                    >
-                      <i class="fab fa-github me-2"></i>View on GitHub
-                    </a>
-                  </div>
-                </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">HTML5</div>
               </div>
             </div>
-
-            <style>
-              .implementation-details {
-                background: white;
-                padding: 1rem;
-                border-radius: 8px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-              }
-
-              .project-status {
-                border-left: 4px solid white;
-              }
-
-              .status-list {
-                list-style: none;
-                padding-left: 0;
-                margin-bottom: 0;
-              }
-
-              .status-list li {
-                position: relative;
-                padding-left: 1.5rem;
-                margin-bottom: 0.5rem;
-                font-size: 0.9rem;
-              }
-
-              .status-list li::before {
-                content: "✓";
-                color: white;
-                position: absolute;
-                left: 0;
-              }
-
-              .tech-badges {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.5rem;
-              }
-
-              .badge {
-                padding: 0.5rem 1rem;
-                font-weight: 500;
-                font-size: 0.85rem;
-                border-radius: 20px;
-              }
-
-              .feature-category {
-                background: white;
-                padding: 1rem;
-                border-radius: 8px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-                transition: transform 0.3s ease;
-              }
-
-              .feature-category:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-              }
-
-              .feature-title {
-                color: #4f46e5;
-                font-size: 1rem;
-                margin-bottom: 0.75rem;
-                padding-bottom: 0.5rem;
-                border-bottom: 2px solid #e5e7eb;
-              }
-
-              .feature-list {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-              }
-
-              .feature-list li {
-                padding: 0.4rem 0;
-                position: relative;
-                padding-left: 1.5rem;
-                font-size: 0.9rem;
-                color: #4b5563;
-              }
-
-              .feature-list li::before {
-                content: "•";
-                color: #4f46e5;
-                font-weight: bold;
-                position: absolute;
-                left: 0.5rem;
-              }
-
-              .features-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-                margin-top: 1rem;
-              }
-
-              .github-link {
-                display: inline-flex;
-                align-items: center;
-                padding: 0.75rem 1.5rem;
-                background: #4f46e5;
-                color: white;
-                border-radius: 8px;
-                text-decoration: none;
-                transition: all 0.3s ease;
-                font-weight: 500;
-              }
-
-              .github-link:hover {
-                background: #4338ca;
-                transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
-              }
-
-              @media (max-width: 768px) {
-                .features-grid {
-                  grid-template-columns: 1fr;
-                }
-
-                .tech-badges {
-                  justify-content: center;
-                }
-              }
-            </style>
-          </div>
-          <!-- Base project card structure -->
-          <div class="col-md-6 mb-4">
-            <div class="project-card">
-              <div class="card-body">
-                <div class="project-content">
-                  <h3 class="project-title">
-                    <i class="fas fa-file-archive me-2 text-primary"></i>
-                    File Zipper
-                  </h3>
-                  <p class="project-description">
-                    A sophisticated file compression tool implementing the
-                    Huffman coding algorithm for efficient text file compression
-                    and decompression. Features automatic file handling and
-                    optimized encoding/decoding processes.
-                  </p>
-
-                  <div class="feature-grid mb-4">
-                    <div class="feature-category">
-                      <h5 class="feature-title">
-                        <i class="fas fa-cogs me-2 text-primary"></i>
-                        Core Features
-                      </h5>
-                      <ul class="feature-list">
-                        <li>Huffman encoding algorithm</li>
-                        <li>Text file compression</li>
-                        <li>Automatic file decoding</li>
-                        <li>Download management</li>
-                      </ul>
-                    </div>
-                    <div class="feature-category">
-                      <h5 class="feature-title">
-                        <i class="fas fa-code me-2 text-primary"></i>
-                        Technical Details
-                      </h5>
-                      <ul class="feature-list">
-                        <li>Binary tree implementation</li>
-                        <li>Priority queue management</li>
-                        <li>File stream handling</li>
-                        <li>Optimized compression ratios</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="tech-stack mb-4">
-                    <div class="tech-badge">
-                      <i class="fab fa-html5 me-1"></i>HTML5
-                    </div>
-                    <div class="tech-badge">
-                      <i class="fab fa-css3-alt me-1"></i>CSS3
-                    </div>
-                    <div class="tech-badge">
-                      <i class="fab fa-js me-1"></i>JavaScript
-                    </div>
-                    <div class="tech-badge">
-                      <i class="fab fa-php me-1"></i>PHP
-                    </div>
-                  </div>
-
-                  <div class="project-links d-flex gap-3">
-                    <a
-                      href="https://github.com/soma2000-lang/File-Zipper"
-                      class="btn btn-primary github-link"
-                    >
-                      <i class="fab fa-github me-2"></i>View Source
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">
-                    Deep Learning Paper Implementations
-                  </h4>
-                  <p class="card-text">
-                    Collection of implemented research papers in deep learning,
-                    focusing on computer vision and neural networks.
-                  </p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    A comprehensive repository of deep learning paper
-                    implementations, featuring:
-                  </p>
-                  <div class="features-grid">
-                    <div class="feature-category">
-                      <h5 class="feature-title">Vision Transformers</h5>
-                      <ul class="feature-list">
-                        <li>
-                          Implemented Vision Transformer (ViT) architecture
-                        </li>
-                        <li>Attention mechanism for image processing</li>
-                        <li>Patch-based image tokenization</li>
-                        <li>Positional embeddings implementation</li>
-                        <li>Multi-head self-attention modules</li>
-                      </ul>
-                    </div>
-
-                    <div class="feature-category">
-                      <h5 class="feature-title">Neural Networks</h5>
-                      <ul class="feature-list">
-                        <li>Custom loss functions implementation</li>
-                        <li>Gradient computation and backpropagation</li>
-                        <li>Layer normalization techniques</li>
-                        <li>Various activation functions</li>
-                        <li>Optimization algorithms</li>
-                      </ul>
-                    </div>
-
-                    <div class="feature-category">
-                      <h5 class="feature-title">Training & Evaluation</h5>
-                      <ul class="feature-list">
-                        <li>Training pipeline development</li>
-                        <li>Performance metrics implementation</li>
-                        <li>Model evaluation frameworks</li>
-                        <li>Hyperparameter tuning</li>
-                        <li>Cross-validation strategies</li>
-                      </ul>
-                    </div>
-
-                    <div class="feature-category">
-                      <h5 class="feature-title">Technical Stack</h5>
-                      <ul class="feature-list">
-                        <li>PyTorch for model implementation</li>
-                        <li>NumPy for numerical computations</li>
-                        <li>Matplotlib for visualizations</li>
-                        <li>Jupyter notebooks for experiments</li>
-                        <li>Git for version control</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="tech-badges mt-3 mb-3">
-                    <span class="badge bg-primary">PyTorch</span>
-                    <span class="badge bg-secondary">Computer Vision</span>
-                    <span class="badge bg-success">Transformers</span>
-                    <span class="badge bg-info">Neural Networks</span>
-                    <span class="badge bg-warning text-dark"
-                      >Deep Learning</span
-                    >
-                  </div>
-                  <div class="mt-3">
-                    <a
-                      href="https://github.com/soma2000-lang/Paper-Implementations-in-Deep-Learning"
-                      class="github-link"
-                      target="_blank"
-                    >
-                      <i class="fab fa-github me-2"></i>View on GitHub
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <style>
-              .implementation-details {
-                background: white;
-                padding: 1rem;
-                border-radius: 8px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-              }
-
-              .project-status {
-                border-left: 4px solid white;
-              }
-
-              .status-list {
-                list-style: none;
-                padding-left: 0;
-                margin-bottom: 0;
-              }
-
-              .status-list li {
-                position: relative;
-                padding-left: 1.5rem;
-                margin-bottom: 0.5rem;
-                font-size: 0.9rem;
-              }
-
-              .status-list li::before {
-                content: "✓";
-                color: white;
-                position: absolute;
-                left: 0;
-              }
-
-              .tech-badges {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.5rem;
-              }
-
-              .badge {
-                padding: 0.5rem 1rem;
-                font-weight: 500;
-                font-size: 0.85rem;
-                border-radius: 20px;
-              }
-
-              .feature-category {
-                background: white;
-                padding: 1rem;
-                border-radius: 8px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-                transition: transform 0.3s ease;
-              }
-
-              .feature-category:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-              }
-
-              .feature-title {
-                color: #4f46e5;
-                font-size: 1rem;
-                margin-bottom: 0.75rem;
-                padding-bottom: 0.5rem;
-                border-bottom: 2px solid #e5e7eb;
-              }
-
-              .feature-list {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-              }
-
-              .feature-list li {
-                padding: 0.4rem 0;
-                position: relative;
-                padding-left: 1.5rem;
-                font-size: 0.9rem;
-                color: #4b5563;
-              }
-
-              .feature-list li::before {
-                content: "•";
-                color: #4f46e5;
-                font-weight: bold;
-                position: absolute;
-                left: 0.5rem;
-              }
-
-              .features-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-                margin-top: 1rem;
-              }
-
-              .github-link {
-                display: inline-flex;
-                align-items: center;
-                padding: 0.75rem 1.5rem;
-                background: #4f46e5;
-                color: white;
-                border-radius: 8px;
-                text-decoration: none;
-                transition: all 0.3s ease;
-                font-weight: 500;
-              }
-
-              .github-link:hover {
-                background: #4338ca;
-                transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
-              }
-
-              @media (max-width: 768px) {
-                .features-grid {
-                  grid-template-columns: 1fr;
-                }
-
-                .tech-badges {
-                  justify-content: center;
-                }
-              }
-            </style>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">User Rating Prediction</h4>
-                  <p class="card-text">
-                    Advanced rating prediction system with multilingual support.
-                  </p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    Developed a model with feature engineering, created RAG
-                    pipeline for multilingual queries, utilized FAISS for vector
-                    database management, and containerized with Docker.
-                  </p>
-                  <a
-                    href="https://github.com/soma2000-lang/FullStack_ML"
-                    class="github-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github me-2"></i>View on GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">Django Recommendation System</h4>
-                  <p class="card-text">
-                    Content-based recommendation system built with Django.
-                  </p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    Developed a Django website using advanced recommendation
-                    algorithms including content-based filtering, FunkSVD, and
-                    popularity-based recommenders.
-                  </p>
-                  <a
-                    href="https://github.com/soma2000-lang/Django-Recommendation-system"
-                    class="github-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github me-2"></i>View on GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">Customer Churn Prediction</h4>
-                  <p class="card-text">
-                    ML model for predicting customer churn with high accuracy.
-                  </p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    Developed a predictive model achieving 85% accuracy through
-                    advanced feature engineering and machine learning
-                    techniques.
-                  </p>
-                  <a
-                    href="https://github.com/soma2000-lang/Churn-"
-                    class="github-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github me-2"></i>View on GitHub
-                  </a>
-                </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">CSS3</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <!-- AI/ML Frameworks -->
+        <div class="mb-5">
+          <h4 class="text-center mb-4">AI/ML Frameworks</h4>
+          <div class="row g-3">
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">TensorFlow</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">PyTorch</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">JAX</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">Hugging Face</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">Scikit-learn</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">Keras</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">NumPy</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">PaddlePaddle</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <script>
-      function toggleProject(card) {
-        // Remove expanded class from all other cards
-        document.querySelectorAll(".project-card").forEach((otherCard) => {
-          if (otherCard !== card) {
-            otherCard.classList.remove("expanded");
-          }
-        });
+        <!-- Backend & APIs -->
+        <div class="mb-5">
+          <h4 class="text-center mb-4">Backend & APIs</h4>
+          <div class="row g-3">
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">FastAPI</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">Django</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">Pydantic</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">LangChain</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">LangGraph</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">REST APIs</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">GraphQL</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        // Toggle expanded class on clicked card
-        card.classList.toggle("expanded");
-      }
+        <!-- Databases -->
+        <div class="mb-5">
+          <h4 class="text-center mb-4">Vector & Databases</h4>
+          <div class="row g-3">
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">FAISS</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">ChromaDB</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">Pinecone</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">MySQL</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">MongoDB</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">PostgreSQL</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">SQLite</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">Redis</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      // Prevent links from triggering card expansion
-      document.querySelectorAll(".github-link").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.stopPropagation();
-        });
-      });
-    </script>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-5">Skills</h2>
-        <div class="row g-4">
-          <div class="col-6 col-md-3 col-lg-2">
-            <div class="card h-100 skill-card">
-              <div class="card-body text-center">Deep Learning</div>
+        <!-- DevOps & Cloud -->
+        <div class="mb-5">
+          <h4 class="text-center mb-4">DevOps & Cloud</h4>
+          <div class="row g-3">
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">Docker</div>
+              </div>
             </div>
-          </div>
-          <div class="col-6 col-md-3 col-lg-2">
-            <div class="card h-100 skill-card">
-              <div class="card-body text-center">Statistics</div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">Kubernetes</div>
+              </div>
             </div>
-          </div>
-          <div class="col-6 col-md-3 col-lg-2">
-            <div class="card h-100 skill-card">
-              <div class="card-body text-center">C++</div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">Git</div>
+              </div>
             </div>
-          </div>
-          <div class="col-6 col-md-3 col-lg-2">
-            <div class="card h-100 skill-card">
-              <div class="card-body text-center">Docker</div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">CI/CD</div>
+              </div>
             </div>
-          </div>
-          <div class="col-6 col-md-3 col-lg-2">
-            <div class="card h-100 skill-card">
-              <div class="card-body text-center">Databases</div>
-            </div>
-          </div>
-          <div class="col-6 col-md-3 col-lg-2">
-            <div class="card h-100 skill-card">
-              <div class="card-body text-center">LLD</div>
-            </div>
-          </div>
-          <div class="col-6 col-md-3 col-lg-2">
-            <div class="card h-100 skill-card">
-              <div class="card-body text-center">Django</div>
-            </div>
-          </div>
-          <div class="col-6 col-md-3 col-lg-2">
-            <div class="card h-100 skill-card">
-              <div class="card-body text-center">NodeJs, ExpressJs</div>
-            </div>
-          </div>
-
-          <div class="col-6 col-md-3 col-lg-2">
-            <div class="card h-100 skill-card">
-              <div class="card-body text-center">AWS</div>
-            </div>
-          </div>
-          <div class="col-6 col-md-3 col-lg-2">
-            <div class="card h-100 skill-card">
-              <div class="card-body text-center">Nginx</div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="card h-100 skill-card">
+                <div class="card-body text-center">AWS</div>
+              </div>
             </div>
           </div>
         </div>
@@ -1604,43 +829,198 @@
     <!-- Experience Section -->
     <section id="experience" class="py-5 bg-light">
       <div class="container">
-        <h2 class="text-center mb-5">Experience</h2>
+        <h2 class="text-center mb-5">Professional Experience</h2>
         <div class="row g-4">
+          <!-- DeepEdge -->
           <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <h4 class="text-primary">
-                  Software Engineer | Deloitte (Full Stack with Backend Heavy)
-                </h4>
-                <h5 class="fw-bold">Deloitte</h5>
-                <p class="text-muted mb-3">July 2023 - Present | Hyderabad</p>
-                <p>
-                  Developed full-stack applications using Node.js, JavaScript,
-                  created REST APIs, and deployed on AWS Built secure
-                  authentication using JWT, configured middleware for logging
-                  and error handling Developed webhooks for chatbots using
-                  Python SDK, implemented Business Entity Recognition Managed 6
-                  large custom UI applications with focus on security best
-                  practices and data integrity
-                </p>
+                <h4 class="text-primary">Full Stack Machine Learning Engineer</h4>
+                <h5 class="fw-bold">DeepEdge</h5>
+                <p class="text-muted mb-3">March 2025 – Present | Hyderabad, India</p>
+                <ul>
+                  <li>Developed end-to-end anti-UAV quadcopter tracking system for runaway detection under challenging infrared conditions, delivering critical defense capabilities</li>
+                  <li>Built advanced tracking models using YOLOv8 with sophisticated object tracking algorithms including linear and non-linear Kalman filters, and infrared thermal optimization for enhanced performance</li>
+                  <li>Enhanced the performance over 50% over YOLOv8s by introducing motion queue masks</li>
+                  <li>Managed 2-3 simultaneous client projects while maintaining high service quality and meeting all project deadlines. Researched and implemented findings from industry research papers like ERFE to achieve measurable performance improvements</li>
+                  <li>Introduced a new technique: MOG2 Background Subtraction + Morphological Cleaning → Contour Detection + Size/Shape Filtering + SVM Classification of Motion Candidates which achieved 30% performance gains over YOLOv8</li>
+                  <li>Implemented cutting-edge point tracking algorithms including Lucas-Kanade tracking and TAPNet by GoogleDeepmind, CoTracker by Facebook for precise tracking of point-like objects in complex environments</li>
+                </ul>
               </div>
             </div>
           </div>
+
+          <!-- Deloitte -->
           <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <h4 class="text-primary">
-                  Freelance Machine Learning Developer
-                </h4>
+                <h4 class="text-primary">Machine Learning Engineer and Developer</h4>
+                <h5 class="fw-bold">Deloitte</h5>
+                <p class="text-muted mb-3">July 2023 – March 2025 | Hyderabad, India</p>
+                <ul>
+                  <li>Architected and deployed multilingual RAG pipeline with FAISS vector database management, FastAPI endpoints, and Docker containerization for scalable AI solutions</li>
+                  <li>Engineered Django-based movie recommendation system utilizing advanced algorithms including content-based filtering, FunkSVD, and popularity-based recommenders for personalized user experiences</li>
+                  <li>Developed high-performance predictive model for customer purchase likelihood achieving 90% accuracy through sophisticated feature engineering and ML techniques</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unify.ai -->
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="text-primary">Machine Learning Developer (Freelance)</h4>
                 <h5 class="fw-bold">Unify.ai</h5>
-                <p class="text-muted mb-3">February 2023 - May 2023 | Remote</p>
-                <p>
-                  Implemented functions in TensorFlow, JAX, NumPy, Torch,
-                  PaddlePaddle; increased code coverage by 10 • Led unit-testing
-                  with Hypothesis, managed array-api-test suite achieving 80 •
-                  Wrote Ivy OpConverters for TensorRT backend, guided
-                  contributors through large codebase
-                </p>
+                <p class="text-muted mb-3">February 2023 – May 2023 | Remote</p>
+                <ul>
+                  <li>Implemented robust functions across TensorFlow, JAX, NumPy, PyTorch, and PaddlePaddle frameworks, increasing code coverage by 10% and enhancing system reliability</li>
+                  <li>Led comprehensive unit testing with Hypothesis framework and managed array-api-test suite achieving 80% test coverage for production-ready code</li>
+                  <li>Developed sophisticated Ivy OpConverters for TensorRT backend and mentored contributors through complex large-scale codebase navigation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Featured Projects</h2>
+        <div class="row g-4">
+          <!-- AI Agent Flight Scanner -->
+          <div class="col-md-6">
+            <div class="card h-100 project-card" onclick="toggleProject(this)">
+              <div class="card-body">
+                <div class="project-brief p-3">
+                  <h4 class="card-title">🤖 AI Agent Flight Scanner</h4>
+                  <p class="card-text">
+                    Intelligent flight data analysis system using advanced RAG architecture
+                  </p>
+                  <p class="mb-0"><small><strong>Tech:</strong> Groq, Ollama, DeepSeek-R1, LangChain, SQLite, ChromaDB, FastAPI</small></p>
+                </div>
+                <div class="project-details p-3">
+                  <p class="mb-3">
+                    Built intelligent flight data analysis system using advanced RAG architecture with DeepSeek-R1-Distill-LLama-70B and LLama 3.2:3B models for comprehensive flight analytics.
+                  </p>
+                  <a
+                    href="https://github.com/soma2000-lang/AI-Agent-Flight-Scanner"
+                    class="github-link"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github me-2"></i>View on GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Amazon Product Classification -->
+          <div class="col-md-6">
+            <div class="card h-100 project-card" onclick="toggleProject(this)">
+              <div class="card-body">
+                <div class="project-brief p-3">
+                  <h4 class="card-title">🛍️ Amazon Product Classification</h4>
+                  <p class="card-text">
+                    Advanced multiclass classification using ALBERT transformer
+                  </p>
+                  <p class="mb-0"><small><strong>Tech:</strong> PyTorch, Deep Learning, ALBERT</small></p>
+                </div>
+                <div class="project-details p-3">
+                  <p class="mb-3">
+                    Engineered sophisticated feature engineering and preprocessing pipeline improving model accuracy by 10% using synthetic PyTorch datasets and ALBERT transformer for advanced multiclass classification.
+                  </p>
+                  <a
+                    href="https://github.com/soma2000-lang/Amazon-Product-Classification"
+                    class="github-link"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github me-2"></i>View on GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Django Food Delivery Platform -->
+          <div class="col-md-6">
+            <div class="card h-100 project-card" onclick="toggleProject(this)">
+              <div class="card-body">
+                <div class="project-brief p-3">
+                  <h4 class="card-title">🍕 Django Food Delivery Platform</h4>
+                  <p class="card-text">
+                    Comprehensive full-stack food delivery solution
+                  </p>
+                  <p class="mb-0"><small><strong>Tech:</strong> Django REST Framework, SQLite, JWT</small></p>
+                </div>
+                <div class="project-details p-3">
+                  <p class="mb-3">
+                    Architected comprehensive full-stack food delivery platform featuring vendor management system, proximity-based search, payment integration, dynamic menu management, automated tax calculations, real-time order tracking, and notification system.
+                  </p>
+                  <a
+                    href="https://github.com/soma2000-lang/Django-Food-Delivery"
+                    class="github-link"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github me-2"></i>View on GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ChildMind Anxiety Prediction -->
+          <div class="col-md-6">
+            <div class="card h-100 project-card" onclick="toggleProject(this)">
+              <div class="card-body">
+                <div class="project-brief p-3">
+                  <h4 class="card-title">🧠 ChildMind Anxiety Prediction</h4>
+                  <p class="card-text">
+                    Predictive healthcare model for early detection
+                  </p>
+                  <p class="mb-0"><strong>Tech:</strong> TensorFlow, Gated RNNs, Deep Learning</small></p>
+                </div>
+                <div class="project-details p-3">
+                  <p class="mb-3">
+                    Developed innovative predictive healthcare model using Gated RNNs to analyze children's physical activity patterns for early detection of problematic internet use, contributing to child mental health research.
+                  </p>
+                  <a
+                    href="https://github.com/soma2000-lang/ChildMind-Anxiety"
+                    class="github-link"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github me-2"></i>View on GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom Vector Database -->
+          <div class="col-md-6">
+            <div class="card h-100 project-card" onclick="toggleProject(this)">
+              <div class="card-body">
+                <div class="project-brief p-3">
+                  <h4 class="card-title">🔍 Custom Vector Database</h4>
+                  <p class="card-text">
+                    High-performance vector database using HNSW graphs
+                  </p>
+                  <p class="mb-0"><small><strong>Tech:</strong> Python, HNSW Graphs</small></p>
+                </div>
+                <div class="project-details p-3">
+                  <p class="mb-3">
+                    Built high-performance lightweight vector database using Hierarchical Navigable Small World (HNSW) graphs for efficient similarity search and retrieval operations.
+                  </p>
+                  <a
+                    href="https://github.com/soma2000-lang/Custom-Vector-DB"
+                    class="github-link"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github me-2"></i>View on GitHub
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1651,27 +1031,8 @@
     <!-- Publications Section -->
     <section id="publications" class="py-5 bg-light">
       <div class="container">
-        <h2 class="text-center mb-5">Publications</h2>
+        <h2 class="text-center mb-5">Research Publications</h2>
         <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card h-100">
-              <div class="card-body">
-                <h4 class="card-title">
-                  SPECTRUM 2020 - Application of Machine Learning in Medicine
-                </h4>
-                <p class="card-text">
-                  Discussed how various deep learning models solve complex
-                  real-life problems
-                </p>
-                <a
-                  href="https://bit.ly/2Y5ZqZm"
-                  target="_blank"
-                  class="btn btn-primary"
-                  >Read Publication</a
-                >
-              </div>
-            </div>
-          </div>
           <div class="col-md-6">
             <div class="card h-100">
               <div class="card-body">
@@ -1679,8 +1040,7 @@
                   IEMATICS 2020 - Homomorphic Encryption
                 </h4>
                 <p class="card-text">
-                  Research on data compression techniques for secure
-                  transmission and storage
+                  Research on data compression techniques for secure transmission and storage using homomorphic encryption methods.
                 </p>
                 <a
                   href="https://bit.ly/3kbDfs2"
@@ -1691,751 +1051,66 @@
               </div>
             </div>
           </div>
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title">
+                  SPECTRUM 2020 - Application of Machine Learning in Medicine
+                </h4>
+                <p class="card-text">
+                  Discussed how various deep learning models solve complex real-life medical problems and their practical applications.
+                </p>
+                <a
+                  href="https://bit.ly/2Y5ZqZm"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Read Publication</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Previous sections remain the same -->
-    <section id="blog" class="py-5">
-      <div class="container">
-          <h2 class="text-center mb-5">Blog Posts</h2>
-          <div class="row g-4">
-              <!-- Featured Blog Post -->
-              <div class="col-12 mb-4">
-                  <div class="card featured-post h-100 blog-card" onclick="toggleBlog(this)">
-                      <div class="card-body p-4">
-                          <div class="blog-brief">
-                              <div class="row align-items-center">
-                                  <div class="col-md-8">
-                                      <div class="featured-badge mb-2">
-                                          <span class="badge bg-primary">Featured</span>
-                                      </div>
-                                      <h3 class="card-title h4">
-                                          Understanding Transformers: A Deep Dive into Attention Mechanisms
-                                      </h3>
-                                      <p class="card-text text-muted mb-3">
-                                          An in-depth exploration of transformer architecture and how attention mechanisms revolutionized natural language processing.
-                                      </p>
-                                      <div class="post-meta">
-                                          <span class="me-3"><i class="far fa-calendar me-1"></i> Oct 15, 2023</span>
-                                          <span class="me-3"><i class="far fa-clock me-1"></i> 15 min read</span>
-                                          <span><i class="fas fa-tags me-1"></i> Machine Learning, NLP</span>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-4 mt-3 mt-md-0">
-                                      <img src="/api/placeholder/400/300" alt="Featured blog post" class="img-fluid rounded blog-image">
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="blog-details mt-4">
-                              <div class="expanded-content">
-                                  <h4>Introduction to Transformers</h4>
-                                  <p>The Transformer architecture, introduced in the landmark paper "Attention Is All You Need," has revolutionized natural language processing and beyond. This blog post provides a comprehensive overview of how Transformers work and why they're so effective.</p>
-                                  
-                                  <h4>Key Components</h4>
-                                  <ul>
-                                      <li><strong>Self-Attention Mechanism:</strong> Allows the model to weigh the importance of different words in relation to each other</li>
-                                      <li><strong>Multi-Head Attention:</strong> Enables the model to focus on different aspects of the input simultaneously</li>
-                                      <li><strong>Position Encodings:</strong> Provides sequential information without recurrence</li>
-                                  </ul>
-  
-                                  <h4>How Attention Works</h4>
-                                  <p>The attention mechanism can be broken down into three main components:</p>
-                                  <ol>
-                                      <li>Query vectors: What we're looking for</li>
-                                      <li>Key vectors: What we have to match against</li>
-                                      <li>Value vectors: The actual content we want to aggregate</li>
-                                  </ol>
-  
-                                  <h4>Practical Applications</h4>
-                                  <p>Transformers have found success in various applications:</p>
-                                  <ul>
-                                      <li>Machine Translation</li>
-                                      <li>Text Summarization</li>
-                                      <li>Question Answering</li>
-                                      <li>Code Generation</li>
-                                  </ul>
-  
-                                  <div class="mt-4">
-                                      <a href="#" class="read-more-link">Read Full Article <i class="fas fa-arrow-right ms-2"></i></a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-  
-              <!-- Regular Blog Posts -->
-              <div class="col-md-6 col-lg-4">
-                  <div class="card blog-card h-100" onclick="toggleBlog(this)">
-                      <div class="card-body p-4">
-                          <div class="blog-brief">
-                              <div class="post-img-wrapper mb-3">
-                                  <img src="/api/placeholder/400/250" alt="Blog post" class="img-fluid rounded blog-image">
-                              </div>
-                              <h4 class="card-title">
-                                  Building Scalable Backend Systems with Node.js
-                              </h4>
-                              <p class="card-text text-muted">
-                                  Best practices and architectural patterns for building high-performance Node.js applications.
-                              </p>
-                              <div class="post-meta">
-                                  <span class="me-3"><i class="far fa-calendar me-1"></i> Sep 28, 2023</span>
-                                  <span><i class="far fa-clock me-1"></i> 10 min read</span>
-                              </div>
-                          </div>
-                          <div class="blog-details mt-4">
-                              <div class="expanded-content">
-                                  <h4>Scalability in Node.js</h4>
-                                  <p>Building scalable backend systems requires careful consideration of architecture, performance, and maintainability. This post explores proven patterns and best practices.</p>
-  
-                                  <h4>Key Architectural Patterns</h4>
-                                  <ul>
-                                      <li><strong>Microservices Architecture:</strong> Breaking down complex applications</li>
-                                      <li><strong>Event-Driven Design:</strong> Handling asynchronous operations</li>
-                                      <li><strong>Caching Strategies:</strong> Improving response times</li>
-                                  </ul>
-  
-                                  <h4>Performance Optimization</h4>
-                                  <p>Learn about crucial performance optimization techniques:</p>
-                                  <ul>
-                                      <li>Database query optimization</li>
-                                      <li>Memory management</li>
-                                      <li>Load balancing</li>
-                                  </ul>
-  
-                                  <div class="mt-4">
-                                      <a href="#" class="read-more-link">Read Full Article <i class="fas fa-arrow-right ms-2"></i></a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-  
-              <!-- Add more blog posts with the same structure -->
-  
-          </div>
-  
-          <!-- View All Posts Button -->
-          <div class="col-12 text-center mt-4">
-              <a href="#" class="btn btn-outline-primary btn-lg view-all-btn">
-                  View All Posts
-                  <i class="fas fa-arrow-right ms-2"></i>
-              </a>
-          </div>
-      </div>
-  
-      <style>
-          .blog-card {
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-              border: none;
-              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-              cursor: pointer;
-          }
-  
-          .blog-card:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-          }
-  
-          .blog-details {
-              max-height: 0;
-              overflow: hidden;
-              transition: max-height 0.5s ease-out;
-          }
-  
-          .blog-card.expanded .blog-details {
-              max-height: 2000px; /* Adjust based on your content */
-              transition: max-height 0.5s ease-in;
-          }
-  
-          .blog-brief {
-              border-bottom: 1px solid transparent;
-              transition: border-color 0.3s;
-          }
-  
-          .blog-card.expanded .blog-brief {
-              border-bottom-color: #dee2e6;
-              padding-bottom: 1rem;
-          }
-  
-          .expanded-content {
-              padding: 1rem 0;
-          }
-  
-          .expanded-content h4 {
-              color: #4f46e5;
-              margin-top: 1.5rem;
-              margin-bottom: 1rem;
-          }
-  
-          .expanded-content p {
-              color: #4b5563;
-              line-height: 1.7;
-              margin-bottom: 1rem;
-          }
-  
-          .expanded-content ul, .expanded-content ol {
-              color: #4b5563;
-              padding-left: 1.5rem;
-              margin-bottom: 1rem;
-          }
-  
-          .expanded-content li {
-              margin-bottom: 0.5rem;
-          }
-  
-          .read-more-link {
-              display: inline-flex;
-              align-items: center;
-              color: #4f46e5;
-              text-decoration: none;
-              font-weight: 500;
-              transition: all 0.3s ease;
-          }
-  
-          .read-more-link:hover {
-              color: #4338ca;
-          }
-  
-          .read-more-link i {
-              transition: transform 0.3s ease;
-          }
-  
-          .read-more-link:hover i {
-              transform: translateX(5px);
-          }
-      </style>
-  
-      <script>
-          function toggleBlog(card) {
-              // Remove expanded class from all other cards
-              document.querySelectorAll('.blog-card').forEach(otherCard => {
-                  if (otherCard !== card) {
-                      otherCard.classList.remove('expanded');
-                  }
-              });
-  
-              // Toggle expanded class on clicked card
-              card.classList.toggle('expanded');
-          }
-  
-          // Prevent links from triggering card expansion
-          document.querySelectorAll('.read-more-link').forEach(link => {
-              link.addEventListener('click', (e) => {
-                  e.stopPropagation();
-              });
-          });
-      </script>
-  </section>
     <!-- Achievements Section -->
     <section id="achievements" class="py-5">
       <div class="container">
-        <h2 class="text-center mb-5">Achievements</h2>
+        <h2 class="text-center mb-5">Achievements & Recognition</h2>
         <div class="row">
           <div class="col-12">
             <div class="card">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item d-flex flex-column gap-2">
-                  Multiple Certifications in
-                  <div class="d-flex flex-wrap gap-2">
-                    <a
-                      href="https://docs.google.com/document/d/1pgCf1Quv9ulZPqEigcJUgbhTmRwv_ePW6Gh43l44BbM/edit?usp=sharing"
-                      class="achievement-link"
-                    >
-                      <span class="highlight">NLP</span> </a
-                    >,
-                    <a
-                      href="https://docs.google.com/document/d/1pgCf1Quv9ulZPqEigcJUgbhTmRwv_ePW6Gh43l44BbM/edit?usp=sharing"
-                      class="achievement-link"
-                    >
-                      <span class="highlight">CNN</span> </a
-                    >, and
-                    <a
-                      href="https://docs.google.com/document/d/1pgCf1Quv9ulZPqEigcJUgbhTmRwv_ePW6Gh43l44BbM/edit?usp=sharing"
-                      class="achievement-link"
-                    >
-                      <span class="highlight">Deep Neural Networks</span>
-                    </a>
-                    from Coursera
-                  </div>
+                <li class="list-group-item">
+                  <strong>🏆 Challang Hackathon:</strong> Top 10 finalist among 100 elite teams shortlisted worldwide (2 participants per team) - demonstrating exceptional problem-solving capabilities on global stage
                 </li>
                 <li class="list-group-item">
-                  Ranked
-                  <a
-                    href="https://www.hackerearth.com/challenges/"
-                    class="achievement-link"
-                  >
-                    <span class="highlight">18th among 2500 participants</span>
-                  </a>
-                  in HackerEarth ML Challenge
-                </li>
-                  <li class="list-group-item">
-                  Got
-                  <a
-                    href="https://www.hackerearth.com/challenges/"
-                    class="achievement-link"
-                  >
-                    <span class="highlight">Deloiite Impact the dot award for outstanding performance</span>
-                  </a>
-                 
+                  <strong>🥈 HackerEarth ML Challenge:</strong> Ranked 18/2500 participants
                 </li>
                 <li class="list-group-item">
-                  Ranked
-                  <a
-                    href="https://codingcompetitions.withgoogle.com/codejamio"
-                    class="achievement-link"
-                  >
-                    <span class="highlight">1.6k globally</span>
-                  </a>
-                  in Google Code Jam for Women
+                  <strong>🥉 Cipla Competition:</strong> Ranked 12/1000+ participants in data science competition
                 </li>
                 <li class="list-group-item">
-                  Invited as
-                  <a
-                    href="https://anitab.org/events-programs/"
-                    class="achievement-link"
-                  >
-                    <span class="highlight">mentor for Open Source Day</span>
-                  </a>
-                  by AnitaB.org
+                  <strong>🌍 Google Code Jam for Women:</strong> Ranked 1.6k globally
                 </li>
                 <li class="list-group-item">
-                  Open Source Contributor at various organizations
-                  <a
-                    href="https://gist.github.com/soma2000-lang/524d71179a85bd016eb14287d43e5d7b"
-                    class="achievement-link"
-                  >
-                    <span class="highlight"
-                      >such as Pytorch, Hugging Face
-                      Transformers,Keras-Cv,Keras-NLP,SUnify.ai etc</span
-                    >
-                  </a>
-                  by AnitaB.org
+                  <strong>🎓 LiFT Scholar 2022:</strong> Top 500 candidates worldwide in developers category by Linux Foundation
                 </li>
                 <li class="list-group-item">
-                  Ranked
-                  <a
-                    href="https://www.cipla.com/data-science-competition"
-                    class="achievement-link"
-                  >
-                    <span class="highlight">12th among 1000+ participants</span>
-                  </a>
-                  in Cipla data science competition
+                  <strong>👥 GHC OSD'23 Mentor:</strong> Mentor for OpenSSF project at Grace Hopper Celebration Open Source Day
                 </li>
                 <li class="list-group-item">
-                  <a
-                    href="https://www.linuxfoundation.org/lift-scholarship"
-                    class="achievement-link"
-                  >
-                    <span class="highlight">LiFT Scholar 2022</span>
-                  </a>
-                  (Top 500 candidates worldwide in developers category)
+                  <strong>🌐 Open Source Contributor:</strong> Active contributor to PyTorch Lightning, Hugging Face Transformers, KerasCV, KerasNLP - recognized for high-quality contributions to global developer community
+                </li>
+                <li class="list-group-item">
+                  <strong>📜 Multiple Certifications:</strong> Deep Learning Specialization, NLP, CNN from Coursera
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-
-      <style>
-        .achievement-link {
-          text-decoration: none;
-          color: inherit;
-          transition: all 0.3s ease;
-        }
-
-        .achievement-link:hover {
-          color: inherit;
-        }
-
-        .highlight {
-          background: linear-gradient(transparent 50%, #ffd54f 50%);
-          padding: 0 4px;
-          border-radius: 3px;
-          transition: background 0.3s ease;
-        }
-
-        .achievement-link:hover .highlight {
-          background: linear-gradient(transparent 20%, #ffd54f 20%);
-        }
-
-        .list-group-item {
-          padding: 1rem 1.5rem;
-          transition: background-color 0.3s ease;
-        }
-
-        .list-group-item:hover {
-          background-color: #f8f9fa;
-        }
-      </style>
     </section>
-    <section id="contact" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-5">Contact Me</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="card contact-card">
-              <div class="card-body p-4">
-                <div class="row gy-4">
-                  <!-- Contact Info -->
-                  <div class="col-md-5">
-                    <div class="contact-info">
-                      <h3 class="h4 mb-4">Let's Connect</h3>
-                      <div class="contact-item mb-4">
-                        <i class="fas fa-envelope text-primary me-2"></i>
-                        <a
-                          href="mailto:bishnupadamajumder32@gmail.com"
-                          class="text-decoration-none"
-                        >
-                          bishnupadamajumder32@gmail.com
-                        </a>
-                      </div>
-                      <div class="contact-item mb-4">
-                        <i class="fas fa-map-marker-alt text-primary me-2"></i>
-                        <span>Hyderabad, India</span>
-                      </div>
-                      <div class="social-links mt-4">
-                        <a
-                          href="https://www.linkedin.com/in/somasree-majumder-3533411aa/"
-                          target="_blank"
-                          class="social-link"
-                        >
-                          <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a
-                          href="https://github.com/soma2000-lang"
-                          target="_blank"
-                          class="social-link"
-                        >
-                          <i class="fab fa-github"></i>
-                        </a>
-                        <a
-                          href="https://www.kaggle.com/somasreemajumder"
-                          target="_blank"
-                          class="social-link"
-                        >
-                          <i class="fab fa-kaggle"></i>
-                        </a>
-                        <a
-                          href="https://medium.com/@seckroll16"
-                          target="_blank"
-                          class="social-link"
-                        >
-                          <i class="fab fa-medium"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Contact Form -->
-                  <div class="col-md-7">
-                    <form id="contactForm" class="contact-form">
-                      <div class="mb-3">
-                        <label for="from_name" class="form-label">Name</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="from_name"
-                          name="from_name"
-                          required
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label for="reply_to" class="form-label">Email</label>
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="reply_to"
-                          name="reply_to"
-                          required
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="subject"
-                          name="subject"
-                          required
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea
-                          class="form-control"
-                          id="message"
-                          name="message"
-                          rows="4"
-                          required
-                        ></textarea>
-                      </div>
-                      <button
-                        type="submit"
-                        class="btn btn-primary w-100"
-                        id="submitBtn"
-                      >
-                        <span class="button-text">Send Message</span>
-                        <span
-                          class="spinner-border spinner-border-sm d-none"
-                          role="status"
-                          aria-hidden="true"
-                        ></span>
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Toast Notification -->
-      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-        <div
-          id="emailNotification"
-          class="toast"
-          role="alert"
-          aria-live="assertive"
-          aria-atomic="true"
-        >
-          <div class="toast-header">
-            <strong class="me-auto" id="toastTitle">Notification</strong>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="toast"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="toast-body" id="toastMessage"></div>
-        </div>
-      </div>
-
-      <style>
-        /* Previous styles remain the same */
-
-        .toast {
-          background: white;
-          border-radius: 0.5rem;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .toast.success .toast-header {
-          background-color: #d1fae5;
-          color: #065f46;
-        }
-
-        .toast.error .toast-header {
-          background-color: #fee2e2;
-          color: #991b1b;
-        }
-
-        #submitBtn:disabled {
-          cursor: not-allowed;
-          opacity: 0.7;
-        }
-      </style>
-
-      <!-- Add EmailJS SDK -->
-      <script
-        type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-      ></script>
-
-      <script>
-        (function () {
-          // Initialize EmailJS with your public key
-          emailjs.init("YOUR_PUBLIC_KEY");
-
-          const form = document.getElementById("contactForm");
-          const submitBtn = document.getElementById("submitBtn");
-          const buttonText = submitBtn.querySelector(".button-text");
-          const spinner = submitBtn.querySelector(".spinner-border");
-          const toast = new bootstrap.Toast(
-            document.getElementById("emailNotification")
-          );
-
-          function showNotification(success, message) {
-            const toastElement = document.getElementById("emailNotification");
-            const toastTitle = document.getElementById("toastTitle");
-            const toastMessage = document.getElementById("toastMessage");
-
-            toastElement.className = "toast " + (success ? "success" : "error");
-            toastTitle.textContent = success ? "Success!" : "Error";
-            toastMessage.textContent = message;
-            toast.show();
-          }
-
-          form.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            // Disable button and show spinner
-            submitBtn.disabled = true;
-            buttonText.textContent = "Sending...";
-            spinner.classList.remove("d-none");
-
-            // Send the email using EmailJS
-            emailjs
-              .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-              .then(() => {
-                showNotification(
-                  true,
-                  "Your message has been sent successfully!"
-                );
-                form.reset();
-              })
-              .catch((error) => {
-                showNotification(
-                  false,
-                  "There was an error sending your message. Please try again."
-                );
-                console.error("EmailJS Error:", error);
-              })
-              .finally(() => {
-                // Re-enable button and hide spinner
-                submitBtn.disabled = false;
-                buttonText.textContent = "Send Message";
-                spinner.classList.add("d-none");
-              });
-          });
-        })();
-      </script>
-    </section>
-
-    <style>
-      .project-card {
-        background: white;
-        border-radius: 1rem;
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        height: 100%;
-      }
-
-      .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      .project-content {
-        padding: 2rem;
-      }
-
-      .project-title {
-        color: #1a1a1a;
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-      }
-
-      .project-description {
-        color: #4b5563;
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
-      }
-
-      .feature-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-      }
-
-      .feature-category {
-        background: #f8f9fa;
-        border-radius: 0.75rem;
-        padding: 1.25rem;
-        transition: transform 0.3s ease;
-      }
-
-      .feature-category:hover {
-        transform: translateY(-2px);
-      }
-
-      .feature-title {
-        color: #2563eb;
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-        display: flex;
-        align-items: center;
-      }
-
-      .feature-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .feature-list li {
-        color: #4b5563;
-        position: relative;
-        padding-left: 1.25rem;
-        margin-bottom: 0.5rem;
-        font-size: 0.9rem;
-      }
-
-      .feature-list li::before {
-        content: "→";
-        position: absolute;
-        left: 0;
-        color: #2563eb;
-      }
-
-      .tech-stack {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-      }
-
-      .tech-badge {
-        background: #f0f4ff;
-        color: #2563eb;
-        padding: 0.5rem 1rem;
-        border-radius: 9999px;
-        font-size: 0.875rem;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s ease;
-      }
-
-      .tech-badge:hover {
-        background: #e0e7ff;
-        transform: translateY(-2px);
-      }
-
-      .github-link {
-        padding: 0.75rem 1.5rem;
-        border-radius: 0.5rem;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-      }
-
-      .github-link:hover {
-        transform: translateY(-2px);
-      }
-
-      @media (max-width: 768px) {
-        .feature-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .project-links {
-          flex-direction: column;
-        }
-
-        .tech-stack {
-          justify-content: center;
-        }
-      }
-    </style>
 
     <!-- Education Section -->
     <section id="education" class="py-5 bg-light">
@@ -2446,12 +1121,12 @@
             <div class="card">
               <div class="card-body text-center">
                 <h4 class="card-title">
-                  Institute of Engineering and Management
+                  Institute of Engineering & Management
                 </h4>
                 <p class="card-text">
-                  Electronics and Communication Engineering
+                  Bachelor of Technology in Electronics and Communication Engineering
                 </p>
-                <p class="card-text text-muted">2019 - 2023</p>
+                <p class="card-text text-muted">August 2019 – May 2023</p>
                 <p class="card-text fw-bold">CGPA: 8.94</p>
               </div>
             </div>
@@ -2459,12 +1134,130 @@
         </div>
       </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Get In Touch</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="card-body p-4">
+                <div class="row gy-4">
+                  <div class="col-md-12 text-center">
+                    <h3 class="h4 mb-4">Let's Connect</h3>
+                    <div class="contact-item mb-3">
+                      <i class="fas fa-envelope text-primary me-2"></i>
+                      <a
+                        href="mailto:seckroll16@gmail.com"
+                        class="text-decoration-none"
+                        style="color: #333;"
+                      >
+                        seckroll16@gmail.com
+                      </a>
+                    </div>
+                    <div class="contact-item mb-3">
+                      <i class="fas fa-phone text-primary me-2"></i>
+                      <span style="color: #333;">7980872028</span>
+                    </div>
+                    <div class="contact-item mb-4">
+                      <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                      <span style="color: #333;">Hyderabad, India</span>
+                    </div>
+                    <div class="social-links mt-4 d-flex justify-content-center gap-3">
+                      <a
+                        href="https://www.linkedin.com/in/somasree-majumder-3533411aa/"
+                        target="_blank"
+                        class="btn btn-outline-primary"
+                      >
+                        <i class="fab fa-linkedin me-2"></i>LinkedIn
+                      </a>
+                      <a
+                        href="https://github.com/soma2000-lang"
+                        target="_blank"
+                        class="btn btn-outline-dark"
+                      >
+                        <i class="fab fa-github me-2"></i>GitHub
+                      </a>
+                      <a
+                        href="https://www.kaggle.com/somasreemajumder"
+                        target="_blank"
+                        class="btn btn-outline-info"
+                      >
+                        <i class="fab fa-kaggle me-2"></i>Kaggle
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="text-center">
+          <p class="mb-0 text-muted footer-text">
+            © 2025 Somasree Majumder. All rights reserved.
+          </p>
+        </div>
+      </div>
+
+      <style>
+        .footer {
+          background-color: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          margin-top: 2rem;
+        }
+
+        .footer-text {
+          font-size: 0.875rem;
+          font-weight: 500;
+          color: rgba(255, 255, 255, 0.8) !important;
+        }
+
+        .footer-text:hover {
+          color: #fff !important;
+        }
+
+        @media (max-width: 768px) {
+          .footer {
+            padding: 1rem 0;
+          }
+        }
+      </style>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
     <script>
+      // Project card expansion
+      function toggleProject(card) {
+        document.querySelectorAll(".project-card").forEach((otherCard) => {
+          if (otherCard !== card) {
+            otherCard.classList.remove("expanded");
+          }
+        });
+        card.classList.toggle("expanded");
+      }
+
+      // Prevent links from triggering card expansion
+      document.querySelectorAll(".github-link").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.stopPropagation();
+        });
+      });
+
       // Intersection Observer for section animations
       const observerOptions = {
         threshold: 0.1
       };
-  
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -2472,203 +1265,33 @@
           }
         });
       }, observerOptions);
-  
+
       document.querySelectorAll('section').forEach(section => {
         observer.observe(section);
       });
-    </script>
-    <script>
-      // Form Security
+
+      // Security measures
       document.addEventListener("DOMContentLoaded", function () {
-        // Anti-spam measures for contact form
-        const contactForm = document.getElementById("contactForm");
-        if (contactForm) {
-          // Add honeypot field
-          const honeyPotInput = document.createElement("input");
-          honeyPotInput.type = "text";
-          honeyPotInput.name = "bot-field";
-          honeyPotInput.style.display = "none";
-          contactForm.appendChild(honeyPotInput);
-
-          // Rate limiting
-          let lastSubmissionTime = 0;
-          const SUBMISSION_COOLDOWN = 30000; // 30 seconds
-
-          // Form sanitization and validation
-          contactForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            // Check honeypot
-            if (honeyPotInput.value) {
-              console.log("Bot detected");
-              return false;
-            }
-
-            // Rate limiting check
-            const now = Date.now();
-            if (now - lastSubmissionTime < SUBMISSION_COOLDOWN) {
-              showNotification(false, "Please wait before submitting again.");
-              return false;
-            }
-
-            // Sanitize inputs
-            const formData = new FormData(contactForm);
-            for (let [key, value] of formData.entries()) {
-              // Basic XSS prevention
-              formData.set(key, sanitizeInput(value));
-            }
-
-            // Validate email
-            const email = formData.get("reply_to");
-            if (!isValidEmail(email)) {
-              showNotification(false, "Please enter a valid email address.");
-              return false;
-            }
-
-            lastSubmissionTime = now;
-            // Continue with form submission...
-          });
+        // Input sanitization function
+        function sanitizeInput(input) {
+          return input
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#x27;")
+            .replace(/\//g, "&#x2F;");
         }
-      });
 
-      // Input sanitization function
-      function sanitizeInput(input) {
-        return input
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;")
-          .replace(/'/g, "&#x27;")
-          .replace(/\//g, "&#x2F;");
-      }
-
-      // Email validation function
-      function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-      }
-
-      // Add CSRF protection
-      function addCSRFToken() {
-        const token = generateRandomToken();
-        sessionStorage.setItem("csrfToken", token);
-        return token;
-      }
-
-      function generateRandomToken() {
-        return Array.from(crypto.getRandomValues(new Uint8Array(32)))
-          .map((b) => b.toString(16).padStart(2, "0"))
-          .join("");
-      }
-
-      // Protect against clickjacking
-      if (window.self === window.top) {
-        // Page is not in an iframe
-        document.addEventListener("DOMContentLoaded", function () {
+        // Protect against clickjacking
+        if (window.self === window.top) {
           const style = document.createElement("style");
           style.innerHTML = "body { display: block !important; }";
           document.head.appendChild(style);
-        });
-      } else {
-        // Block if loaded in iframe
-        document.body.innerHTML =
-          "This content cannot be displayed in an iframe.";
-      }
-
-      // Input validation for all forms
-      document.querySelectorAll("form").forEach((form) => {
-        form.addEventListener("submit", function (e) {
-          const inputs = form.querySelectorAll("input, textarea");
-          inputs.forEach((input) => {
-            // Remove potentially harmful characters
-            input.value = input.value.replace(/<[^>]*>/g, "");
-          });
-        });
-      });
-
-      // Protect against data leakage
-      document.addEventListener("copy", function (e) {
-        const selection = document.getSelection();
-        if (selection.toString().includes("sensitive")) {
-          e.preventDefault();
+        } else {
+          document.body.innerHTML = "This content cannot be displayed in an iframe.";
         }
       });
-
-      // Disable right-click on sensitive content
-      document.querySelectorAll(".sensitive-content").forEach((el) => {
-        el.addEventListener("contextmenu", (e) => e.preventDefault());
-      });
-
-      // Add security headers dynamically
-      function addSecurityHeaders() {
-        const meta = document.createElement("meta");
-        meta.httpEquiv = "Content-Security-Policy";
-        meta.content =
-          "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;";
-        document.head.appendChild(meta);
-      }
-
-      // Protect against XSS in URL parameters
-      function sanitizeURLParams() {
-        const urlParams = new URLSearchParams(window.location.search);
-        for (let [key, value] of urlParams) {
-          if (value.includes("<") || value.includes(">")) {
-            urlParams.set(key, sanitizeInput(value));
-          }
-        }
-      }
-
-      // Initialize all security measures
-      function initSecurity() {
-        addSecurityHeaders();
-        sanitizeURLParams();
-        addCSRFToken();
-      }
-
-      // Call security initialization
-      initSecurity();
     </script>
-
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <footer class="footer py-4">
-      <div class="container">
-          <div class="text-center">
-              <p class="mb-0 text-muted footer-text">
-                  © 2024 Somasree Majumder. All rights reserved.
-              </p>
-          </div>
-      </div>
-  
-      <style>
-          .footer {
-              background-color: #f8f9fa;
-              border-top: 1px solid #dee2e6;
-              margin-top: 2rem;
-          }
-  
-          .footer-text {
-              font-size: 0.875rem;
-              font-weight: 500;
-          }
-  
-          /* Optional hover effect */
-          .footer-text {
-              transition: color 0.3s ease;
-          }
-  
-          .footer-text:hover {
-              color: #4f46e5 !important;
-          }
-  
-          /* Responsive adjustments */
-          @media (max-width: 768px) {
-              .footer {
-                  padding: 1rem 0;
-              }
-          }
-      </style>
-  </footer>
-  
   </body>
 </html>
