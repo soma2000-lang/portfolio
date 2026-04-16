@@ -1,1297 +1,1337 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self' https:; 
-                   script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net 'unsafe-inline';
-                   style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com 'unsafe-inline';
-                   img-src 'self' https: data:;
-                   font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
-                   frame-src 'none';
-                   connect-src 'self' https://api.emailjs.com;"
-    />
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta http-equiv="X-Frame-Options" content="DENY" />
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
-    <meta
-      http-equiv="Referrer-Policy"
-      content="strict-origin-when-cross-origin"
-    />
-    <meta
-      http-equiv="Permissions-Policy"
-      content="geolocation=(), microphone=(), camera=()"
-    />
-    <!-- Cache Control -->
-    <meta
-      http-equiv="Cache-Control"
-      content="no-cache, no-store, must-revalidate"
-    />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <title>Somasree Majumder - Full Stack ML Engineer</title>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --bs-primary: #4f46e5;
-        --bs-primary-rgb: 79, 70, 229;
-        --gradient-start: #1a1a3c;
-        --gradient-end: #4f46e5;
-      }
-
-      body {
-        background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-        color: #fff;
-        position: relative;
-        overflow-x: hidden;
-      }
-
-      /* Animated background effects */
-      body::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        z-index: -1;
-        animation: backgroundMove 30s linear infinite;
-      }
-
-      @keyframes backgroundMove {
-        0% { background-position: 0 0; }
-        100% { background-position: 100px 100px; }
-      }
-
-      .navbar {
-        background: rgba(255, 255, 255, 0.1) !important;
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .nav-link {
-        color: #fff !important;
-        position: relative;
-        padding: 0.5rem 1rem;
-        margin: 0 0.25rem;
-      }
-
-      .nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        width: 0;
-        height: 2px;
-        background: #fff;
-        transition: all 0.3s ease;
-        transform: translateX(-50%);
-      }
-
-      .nav-link:hover::after {
-        width: 100%;
-      }
-
-      .hero-section {
-        background: transparent;
-        padding: 8rem 0;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.2) 0%, transparent 50%);
-        animation: pulseGradient 4s ease-in-out infinite;
-      }
-
-      @keyframes pulseGradient {
-        0% { transform: scale(1); opacity: 0.5; }
-        50% { transform: scale(1.5); opacity: 0.2; }
-        100% { transform: scale(1); opacity: 0.5; }
-      }
-
-      .card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-      }
-
-      .skill-card {
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
-        transition: all 0.3s ease;
-      }
-
-      .skill-card:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateY(-5px) scale(1.05);
-      }
-
-      .download-resume-btn {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        color: #fff;
-        padding: 1rem 2.5rem;
-        transition: all 0.3s ease;
-      }
-
-      .download-resume-btn:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .social-icon {
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 1.8rem;
-        margin: 0 10px;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(5px);
-      }
-
-      .social-icon:hover {
-        transform: translateY(-5px) scale(1.2);
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      /* Specific icon hover colors */
-      .social-icon.linkedin:hover {
-        color: #0077b5;
-      }
-
-      .social-icon.github:hover {
-        color: #333;
-      }
-
-      .social-icon.kaggle:hover {
-        color: #20beff;
-      }
-
-      .social-icon.medium:hover {
-        color: #00ab6c;
-      }
-
-      .social-icon.email:hover {
-        color: #ea4335;
-      }
-
-      #education .card {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-      }
-
-      #education .card-title {
-        color: #000;
-        text-shadow: none;
-        font-weight: 600;
-      }
-
-      #education .card-text {
-        color: #333;
-      }
-
-      #education .text-muted {
-        color: #666 !important;
-      }
-
-      #education .fw-bold {
-        color: #000;
-      }
-
-      #education .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        background: rgba(255, 255, 255, 1);
-      }
-
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 5px;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-        background: rgba(255, 255, 255, 0.3);
-      }
-
-      .card-title, h1, h2, h3, h4, h5, h6 {
-        color: #fff;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      #projects h2,
-      #experience h2,
-      #education h2,
-      #publications h2,
-      #achievements h2 {
-        color: #000;
-        text-shadow: none;
-        background: rgba(255, 255, 255, 0.95);
-        padding: 15px 30px;
-        border-radius: 10px;
-        display: inline-block;
-        margin-bottom: 2rem;
-        font-weight: 600;
-      }
-
-      #projects .card-title {
-        color: #000;
-        text-shadow: none;
-        font-weight: 600;
-      }
-
-      #projects .card {
-        background: rgba(255, 255, 255, 0.95);
-      }
-
-      #projects .card-text {
-        color: #333;
-      }
-
-      #experience .text-primary {
-        color: #000 !important;
-        font-weight: 600;
-      }
-
-      #experience .card {
-        background: rgba(255, 255, 255, 0.95);
-      }
-
-      #experience .fw-bold {
-        color: #000;
-      }
-
-      #experience .text-muted {
-        color: #666 !important;
-      }
-
-      #experience p, #experience li {
-        color: #333;
-      }
-
-      #publications {
-        background: rgba(255, 255, 255, 0.95) !important;
-      }
-
-      #publications h2 {
-        color: #000;
-        text-shadow: none;
-        font-weight: 600;
-      }
-
-      #publications .card {
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        background: white;
-      }
-
-      #publications .card-title {
-        color: #000;
-        text-shadow: none;
-        font-weight: 600;
-      }
-
-      #publications .card-text {
-        color: #333;
-      }
-
-      #publications .btn-primary {
-        background-color: #4f46e5;
-        border-color: #4f46e5;
-        color: white;
-        font-weight: 500;
-        transition: all 0.3s ease;
-      }
-
-      #publications .btn-primary:hover {
-        background-color: #4338ca;
-        border-color: #4338ca;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
-      }
-
-      .card-text {
-        color: rgba(255, 255, 255, 0.8);
-      }
-
-      section {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease;
-      }
-
-      section.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .project-card {
-        cursor: pointer;
-        transition: transform 0.3s, box-shadow 0.3s;
-        overflow: hidden;
-      }
-
-      .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      .project-details {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-        background-color: #f8f9fa;
-      }
-
-      .project-card.expanded .project-details {
-        max-height: 2000px;
-        transition: max-height 0.5s ease-in;
-      }
-
-      .project-brief {
-        border-bottom: 1px solid transparent;
-        transition: border-color 0.3s;
-      }
-
-      .project-card.expanded .project-brief {
-        border-bottom-color: #dee2e6;
-      }
-
-      .github-link {
-        color: #4f46e5;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        padding: 0.75rem 1.5rem;
-        background: #4f46e5;
-        color: white;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-        font-weight: 500;
-      }
-
-      .github-link:hover {
-        background: #4338ca;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      @media (max-width: 768px) {
-        #projects h2,
-        #experience h2,
-        #publications h2,
-        #education h2,
-        #achievements h2 {
-          font-size: 1.75rem;
-          padding: 10px 20px;
-        }
-
-        .download-resume-btn {
-          padding: 0.5rem 1.5rem;
-          font-size: 1rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
-    >
-      <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#publications">Publications</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#achievements">Achievements</a>
-            </li>
-          </ul>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Somasree Majumder — ML Engineer, Real-Time Computer Vision</title>
+<meta name="description" content="ML Engineer specializing in real-time computer vision for defense applications. Anti-UAV tracking, edge inference on NVIDIA Jetson. Contributor to PyTorch Lightning, Hugging Face, KerasCV." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=JetBrains+Mono:wght@300;400;500;600&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-elev: #121212;
+    --bg-card: #161616;
+    --border: #242424;
+    --border-hover: #3a3a3a;
+    --text: #ededed;
+    --text-dim: #a0a0a0;
+    --text-faint: #606060;
+    --accent: #d4ff3a;
+    --accent-warm: #ff6b35;
+    --accent-cool: #4fb0ff;
+    --serif: 'Fraunces', 'Iowan Old Style', 'Palatino', Georgia, serif;
+    --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    --sans: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Subtle grain */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  ::selection { background: var(--accent); color: #000; }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* --- Layout --- */
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+
+  @media (max-width: 640px) {
+    .container { padding: 0 20px; }
+  }
+
+  /* --- Nav --- */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(10, 10, 10, 0.7);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .nav-logo {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo .dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.85); }
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--text-dim);
+  }
+  .nav-links a {
+    transition: color 0.2s;
+    position: relative;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-links a::before {
+    content: counter(nav-counter, decimal-leading-zero) ' / ';
+    color: var(--text-faint);
+  }
+  .nav-links { counter-reset: nav-counter; }
+  .nav-links a { counter-increment: nav-counter; }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+  }
+
+  /* --- Hero --- */
+  .hero {
+    padding: 160px 0 120px;
+    position: relative;
+  }
+  .hero-meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-meta span { display: flex; align-items: center; gap: 8px; }
+  .hero-meta .status-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent); box-shadow: 0 0 8px var(--accent);
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(48px, 9vw, 136px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin: 0 0 32px;
+    font-variation-settings: "opsz" 144;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent);
+  }
+  .hero h1 .slash {
+    color: var(--text-faint);
+    font-weight: 300;
+    font-style: italic;
+  }
+  .hero-sub {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 60px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  @media (max-width: 768px) {
+    .hero-sub { grid-template-columns: 1fr; gap: 24px; }
+  }
+  .hero-sub-block .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .hero-sub-block p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--text-dim);
+    max-width: 52ch;
+  }
+  .hero-sub-block p strong { color: var(--text); font-weight: 500; }
+
+  .hero-cta {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    padding: 14px 22px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+  }
+  .btn:hover {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  .btn.primary {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+  }
+  .btn.primary:hover {
+    background: transparent;
+    color: var(--accent);
+  }
+  .btn .arrow { transition: transform 0.2s; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* --- Section header --- */
+  .section {
+    padding: 100px 0;
+    border-top: 1px solid var(--border);
+    position: relative;
+  }
+  .section-header {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+    align-items: baseline;
+  }
+  @media (max-width: 768px) {
+    .section-header { grid-template-columns: 1fr; gap: 8px; }
+  }
+  .section-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-faint);
+    letter-spacing: 0.1em;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .section-title em {
+    font-style: italic;
+    color: var(--text-dim);
+    font-weight: 300;
+  }
+
+  /* --- Metrics strip --- */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--border);
+    background: var(--bg-elev);
+  }
+  @media (max-width: 768px) {
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+  }
+  .metric {
+    padding: 32px 28px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .metric:last-child, .metrics .metric:nth-child(4) { border-right: none; }
+  @media (max-width: 768px) {
+    .metric:nth-child(2) { border-right: none; }
+    .metric:nth-child(even) { border-right: none; }
+    .metric:nth-child(odd) { border-right: 1px solid var(--border); }
+  }
+  .metric-val {
+    font-family: var(--serif);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .metric-val span { color: var(--accent); }
+  .metric-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* --- Featured work (DeepEdge flagship) --- */
+  .flagship {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  @media (max-width: 640px) {
+    .flagship { padding: 28px; }
+  }
+  .flagship::before {
+    content: 'CONFIDENTIAL / DEFENSE';
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--accent-warm);
+    border: 1px solid var(--accent-warm);
+    padding: 4px 10px;
+  }
+  .flagship-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .flagship h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 28px;
+    max-width: 18ch;
+  }
+  .flagship h3 em { color: var(--accent); font-style: italic; }
+  .flagship-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  @media (max-width: 768px) {
+    .flagship-grid { grid-template-columns: 1fr; gap: 24px; }
+  }
+  .flagship-stat {
+    font-family: var(--serif);
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 6px;
+  }
+  .flagship-stat .unit { color: var(--text-faint); font-size: 22px; font-weight: 400; }
+  .flagship-stat .arrow-stat { color: var(--accent); margin: 0 8px; }
+  .flagship-desc {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .flagship-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0 0;
+    font-size: 15px;
+    color: var(--text-dim);
+  }
+  .flagship-bullets li {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 20px;
+  }
+  .flagship-bullets li:last-child { border-bottom: none; }
+  .flagship-bullets .idx {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.08em;
+    padding-top: 3px;
+  }
+  .flagship-bullets strong { color: var(--text); font-weight: 500; }
+
+  /* --- Work timeline --- */
+  .work-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s;
+  }
+  .work-item:hover { background: rgba(212, 255, 58, 0.02); }
+  @media (max-width: 768px) {
+    .work-item { grid-template-columns: 1fr; gap: 12px; padding: 32px 0; }
+  }
+  .work-date {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-faint);
+    letter-spacing: 0.05em;
+    padding-top: 6px;
+  }
+  .work-role {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0 0 4px;
+  }
+  .work-company {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+  .work-company .separator { color: var(--text-faint); margin: 0 10px; }
+  .work-desc {
+    color: var(--text-dim);
+    font-size: 15px;
+    line-height: 1.65;
+    margin: 0 0 16px;
+    max-width: 70ch;
+  }
+  .work-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+  }
+  .work-highlights li {
+    font-size: 14px;
+    color: var(--text-dim);
+    padding-left: 20px;
+    position: relative;
+    max-width: 72ch;
+  }
+  .work-highlights li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-family: var(--mono);
+  }
+  .work-highlights strong { color: var(--text); font-weight: 500; }
+
+  /* --- Projects grid --- */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  @media (max-width: 768px) {
+    .projects { grid-template-columns: 1fr; }
+  }
+  .project {
+    background: var(--bg);
+    padding: 36px;
+    position: relative;
+    transition: background 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+  }
+  .project:hover { background: var(--bg-elev); }
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 20px;
+    gap: 16px;
+  }
+  .project-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.1em;
+  }
+  .project-link {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .project-link:hover { color: var(--accent); }
+  .project-link .arr { display: inline-block; transition: transform 0.2s; }
+  .project-link:hover .arr { transform: translate(2px, -2px); }
+  .project h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+  }
+  .project p {
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+    flex-grow: 1;
+  }
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+  }
+  .tech-chip {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* --- Open source table --- */
+  .oss-table {
+    border: 1px solid var(--border);
+    background: var(--bg-elev);
+  }
+  .oss-row {
+    display: grid;
+    grid-template-columns: 1fr 140px 1fr 100px;
+    gap: 24px;
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+    transition: background 0.2s;
+  }
+  .oss-row:hover { background: var(--bg-card); }
+  .oss-row:last-child { border-bottom: none; }
+  .oss-row.header {
+    background: var(--bg);
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .oss-repo {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .oss-stars {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--accent);
+  }
+  .oss-contrib {
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .oss-link {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: right;
+    transition: color 0.2s;
+  }
+  .oss-link:hover { color: var(--accent); }
+  @media (max-width: 860px) {
+    .oss-row {
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding: 20px;
+    }
+    .oss-row.header { display: none; }
+    .oss-contrib { grid-column: 1 / -1; font-size: 13px; }
+    .oss-link { grid-column: 1 / -1; text-align: left; }
+  }
+
+  /* --- Recognition grid --- */
+  .recognition {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  @media (max-width: 900px) {
+    .recognition { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .recognition { grid-template-columns: 1fr; }
+  }
+  .rec-item {
+    background: var(--bg);
+    padding: 32px 28px;
+    transition: background 0.3s;
+  }
+  .rec-item:hover { background: var(--bg-elev); }
+  .rec-rank {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    color: var(--accent);
+  }
+  .rec-rank .small { font-size: 18px; color: var(--text-faint); }
+  .rec-title {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  .rec-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* --- Publications --- */
+  .pub-item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 32px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: baseline;
+  }
+  .pub-item:last-child { border-bottom: none; }
+  @media (max-width: 768px) {
+    .pub-item { grid-template-columns: 1fr; gap: 10px; }
+  }
+  .pub-year {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-faint);
+    letter-spacing: 0.05em;
+  }
+  .pub-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+  }
+  .pub-venue {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+  }
+  .pub-link {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .pub-link:hover { color: var(--accent); }
+
+  /* --- Skills ticker --- */
+  .skills-wrap {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    padding: 24px 0;
+    background: var(--bg-elev);
+  }
+  .skills-track {
+    display: flex;
+    gap: 40px;
+    animation: scroll 60s linear infinite;
+    white-space: nowrap;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--text-dim);
+  }
+  .skills-track:hover { animation-play-state: paused; }
+  .skills-track span { display: inline-flex; gap: 40px; flex-shrink: 0; }
+  .skills-track .sep { color: var(--accent); }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* --- Skill grid --- */
+  .skill-cats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+    margin-top: 48px;
+  }
+  @media (max-width: 768px) {
+    .skill-cats { grid-template-columns: 1fr; gap: 32px; }
+  }
+  .skill-cat h5 {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .skill-cat p {
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.45;
+    color: var(--text);
+    margin: 0;
+    font-weight: 400;
+  }
+  .skill-cat p span { color: var(--text-dim); }
+
+  /* --- Contact --- */
+  .contact-block {
+    padding: 100px 0 40px;
+    border-top: 1px solid var(--border);
+    text-align: left;
+  }
+  .contact-block h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(48px, 8vw, 112px);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin: 0 0 48px;
+    max-width: 14ch;
+  }
+  .contact-block h2 em { color: var(--accent); font-style: italic; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-top: 60px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  @media (max-width: 768px) {
+    .contact-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  }
+  .contact-item .label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-faint);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .contact-item a, .contact-item span {
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--text);
+    display: block;
+    transition: color 0.2s;
+    word-break: break-word;
+  }
+  .contact-item a:hover { color: var(--accent); }
+
+  /* --- Footer --- */
+  footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.06em;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* --- Animations on scroll --- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hero entrance stagger */
+  .hero h1, .hero-sub, .hero-cta, .hero-meta {
+    opacity: 0;
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .hero-meta { animation-delay: 0.1s; }
+  .hero h1 { animation-delay: 0.25s; }
+  .hero-sub { animation-delay: 0.5s; }
+  .hero-cta { animation-delay: 0.7s; }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero h1, .hero-sub, .hero-cta, .hero-meta {
+    transform: translateY(20px);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo"><span class="dot"></span>SOMASREE.M</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#oss">Open Source</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div id="top"></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-meta">
+      <span><span class="status-dot"></span>AVAILABLE FOR NEW ROLES · 2026</span>
+      <span>HYDERABAD / REMOTE</span>
+    </div>
+
+    <h1>
+      Building <em>real-time</em><br />
+      computer vision<br />
+      <span class="slash">for</span> defense systems.
+    </h1>
+
+    <div class="hero-sub">
+      <div class="hero-sub-block">
+        <div class="label">Current Focus</div>
+        <p><strong>ML Engineer at DeepEdge.</strong> Leading anti-UAV tracking systems deployed at 3 defense installations. Real-time inference on NVIDIA Jetson edge devices. Sub-pixel object detection &lt; 10ms latency.</p>
+      </div>
+      <div class="hero-sub-block">
+        <div class="label">Open Source</div>
+        <p>Contributor to <strong>PyTorch Lightning</strong> (27K★), <strong>Hugging Face</strong> (135K★), <strong>KerasCV / KerasNLP</strong>. Augmentation layers used by 35K+ engineers. 1M+ monthly developer reach.</p>
+      </div>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#contact" class="btn primary">
+        Get in touch <span class="arrow">→</span>
+      </a>
+      <a href="Somasree_ML-2.pdf" download class="btn">
+        Download CV <span class="arrow">↓</span>
+      </a>
+      <a href="https://github.com/soma2000-lang" target="_blank" rel="noopener" class="btn">
+        GitHub <span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- METRICS -->
+<section class="section" style="padding-top: 0; border-top: none;">
+  <div class="container">
+    <div class="metrics reveal">
+      <div class="metric">
+        <div class="metric-val"><span>4.2×</span></div>
+        <div class="metric-label">Inference Speedup / TensorRT</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val"><span>5km</span></div>
+        <div class="metric-label">Anti-UAV Detection Range</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val"><span>$2M+</span></div>
+        <div class="metric-label">Defense Contract Renewal</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val"><span>1M+</span></div>
+        <div class="metric-label">OSS Monthly Reach</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLAGSHIP -->
+<section class="section" id="flagship">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">§ 01 — FLAGSHIP</div>
+      <h2 class="section-title">The work that <em>moves</em> everything else.</h2>
+    </div>
+
+    <div class="flagship reveal">
+      <div class="flagship-tag">DeepEdge · 2025 — Present · Production</div>
+      <h3>Anti-UAV tracking system for <em>defense installations.</em></h3>
+
+      <ul class="flagship-bullets">
+        <li>
+          <span class="idx">01</span>
+          <span><strong>Pioneered sub-pixel tracking ensemble</strong> — Lucas-Kanade + TAPNet + CoTracker — extending detection range from 1.5km to 5km. Directly contributed to $2M+ contract renewal.</span>
+        </li>
+        <li>
+          <span class="idx">02</span>
+          <span><strong>Architected hybrid CV pipeline</strong> (YOLOv8 + Kalman + MOG2/SVM) achieving 95%+ accuracy with 80% reduction in false positives. Outperformed two competing vendors in head-to-head evaluation.</span>
+        </li>
+        <li>
+          <span class="idx">03</span>
+          <span><strong>Optimized inference 4.2×</strong> (250ms → 60ms) through TensorRT quantization, CUDA kernel fusion, and batching — enabled real-time 30fps on NVIDIA Jetson edge devices.</span>
+        </li>
+        <li>
+          <span class="idx">04</span>
+          <span><strong>Developed 3D world-frame localization</strong> integrating 2D detection, monocular depth estimation, camera intrinsic calibration, and IMU sensor fusion. &lt;0.5m localization error validated against ground truth.</span>
+        </li>
+        <li>
+          <span class="idx">05</span>
+          <span><strong>Established ML CI/CD pipeline</strong> reducing deployment time from 2 weeks to 2 days. Mentored 2 junior engineers on computer vision best practices.</span>
+        </li>
+      </ul>
+
+      <div class="flagship-grid">
+        <div>
+          <div class="flagship-stat">1.5<span class="unit">km</span><span class="arrow-stat">→</span>5<span class="unit">km</span></div>
+          <p class="flagship-desc">Detection range extension via sub-pixel multi-algorithm ensemble.</p>
+        </div>
+        <div>
+          <div class="flagship-stat">250<span class="unit">ms</span><span class="arrow-stat">→</span>60<span class="unit">ms</span></div>
+          <p class="flagship-desc">Per-frame inference on NVIDIA Jetson. Real-time 30fps edge.</p>
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
+</section>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container text-center">
-        <h1 class="display-4 fw-bold mb-3">Somasree Majumder</h1>
-        <p class="lead mb-4">Full Stack Machine Learning Engineer | AI/ML Specialist</p>
-        <div class="mb-4">
-          <a
-            href="Somasree_ML-2.pdf"
-            download
-            class="btn btn-light btn-lg download-resume-btn"
-          >
-            <i class="fas fa-download me-2"></i>Download Resume
-          </a>
-        </div>
-        <div class="d-flex justify-content-center gap-4">
-          <a
-            href="https://www.linkedin.com/in/somasree-majumder-3533411aa/"
-            target="_blank"
-            class="social-icon linkedin"
-            aria-label="LinkedIn"
-          >
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a
-            href="https://github.com/soma2000-lang"
-            target="_blank"
-            class="social-icon github"
-            aria-label="GitHub"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-          <a
-            href="https://www.kaggle.com/somasreemajumder"
-            target="_blank"
-            class="social-icon kaggle"
-            aria-label="Kaggle"
-          >
-            <i class="fab fa-kaggle"></i>
-          </a>
-          <a
-            href="https://medium.com/@seckroll16"
-            target="_blank"
-            class="social-icon medium"
-            aria-label="Medium"
-          >
-            <i class="fab fa-medium-m"></i>
-          </a>
-          <a 
-            href="mailto:seckroll16@gmail.com" 
-            class="social-icon email"
-            aria-label="Email"
-          >
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
+<!-- WORK -->
+<section class="section" id="work">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">§ 02 — EXPERIENCE</div>
+      <h2 class="section-title">Paper <em>to</em> production.</h2>
+    </div>
+
+    <div class="work-item reveal">
+      <div class="work-date">MAR 2025 — PRESENT</div>
+      <div>
+        <h3 class="work-role">Machine Learning Engineer</h3>
+        <div class="work-company">DeepEdge<span class="separator">·</span>Defense AI Startup<span class="separator">·</span>Hyderabad</div>
+        <p class="work-desc">Leading end-to-end development of production anti-UAV tracking systems for defense installations. Real-time computer vision on edge. Full ownership from research to deployment.</p>
+        <ul class="work-highlights">
+          <li>Sub-pixel tracking ensemble: <strong>1.5km → 5km</strong> detection range, $2M+ contract impact</li>
+          <li>Hybrid CV pipeline with <strong>95%+ accuracy</strong>, 80% false-positive reduction</li>
+          <li>TensorRT + CUDA optimization: <strong>4.2× inference speedup</strong> on Jetson</li>
+          <li>3D world-frame localization: <strong>&lt;0.5m error</strong> via monocular depth + IMU fusion</li>
+        </ul>
       </div>
-    </section>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-4 mb-4 mb-md-0">
-            <div class="profile-image-container text-center">
-              <div class="image-wrapper">
-                <img
-                  src="image.png"
-                  alt="Somasree Majumder"
-                  class="profile-image rounded-circle img-fluid shadow"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="profile-content">
-              <h2 class="mb-4">About Me</h2>
-              <p class="lead mb-4">
-                Full Stack Machine Learning Engineer specializing in computer vision, deep learning, and scalable AI solutions.
-              </p>
-              <div class="bio-details">
-                <p class="mb-4">
-                  I'm currently a Full Stack ML Engineer at DeepEdge, where I develop cutting-edge anti-UAV quadcopter tracking systems with advanced object detection and tracking algorithms. With expertise spanning from YOLOv8 to Kalman filters and infrared thermal optimization, I've achieved over 50% performance improvements in challenging defense applications.
-                </p>
-                <p class="mb-4">
-                  Previously at Deloitte, I architected multilingual RAG pipelines, built recommendation systems achieving 90% accuracy, and deployed scalable AI solutions using FastAPI and Docker. My experience also includes contributing to major open-source ML frameworks like PyTorch Lightning, Hugging Face Transformers, KerasCV, and KerasNLP.
-                </p>
-                <p class="mb-4">
-                  As a published researcher in Homomorphic Encryption and ML in Medicine, Top 10 finalist at Challang Hackathon, and LiFT Scholar 2022 (Top 500 worldwide), I combine academic rigor with practical engineering to solve real-world problems through AI/ML technologies.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="work-item reveal">
+      <div class="work-date">JUL 2023 — MAR 2025</div>
+      <div>
+        <h3 class="work-role">Machine Learning Engineer</h3>
+        <div class="work-company">Deloitte<span class="separator">·</span>AI Center of Excellence<span class="separator">·</span>Hyderabad</div>
+        <p class="work-desc">Built production ML systems for enterprise clients — recommendation engines, predictive models, and multilingual RAG pipelines. Shipped measurable business impact at scale.</p>
+        <ul class="work-highlights">
+          <li>Hybrid recommendation engine (collaborative + content + neural CF) — measurable engagement and revenue uplift</li>
+          <li>Purchase prediction model (XGBoost, 200+ features) — <strong>90% precision, +28% conversion</strong></li>
+          <li>Multilingual RAG pipeline — FAISS vector DB, FastAPI endpoints, Docker deployment</li>
+        </ul>
       </div>
+    </div>
 
-      <style>
-        .profile-image-container {
-          position: relative;
-          padding: 1rem;
-        }
-
-        .image-wrapper {
-          position: relative;
-          max-width: 300px;
-          margin: 0 auto;
-        }
-
-        .profile-image {
-          width: 100%;
-          height: auto;
-          border: 4px solid white;
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease;
-        }
-
-        .image-wrapper:hover .profile-image {
-          transform: scale(1.02);
-        }
-
-        .profile-content {
-          padding: 1rem;
-        }
-
-        .bio-details {
-          color: #e5e7eb;
-          line-height: 1.8;
-        }
-
-        @media (max-width: 768px) {
-          .profile-content {
-            text-align: center;
-          }
-        }
-      </style>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-5">Technical Skills</h2>
-        
-        <!-- Programming Languages -->
-        <div class="mb-5">
-          <h4 class="text-center mb-4">Programming Languages</h4>
-          <div class="row g-3">
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">Python</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">JavaScript</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">TypeScript</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">C++</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">HTML5</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">CSS3</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- AI/ML Frameworks -->
-        <div class="mb-5">
-          <h4 class="text-center mb-4">AI/ML Frameworks</h4>
-          <div class="row g-3">
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">TensorFlow</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">PyTorch</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">JAX</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">Hugging Face</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">Scikit-learn</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">Keras</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">NumPy</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">PaddlePaddle</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Backend & APIs -->
-        <div class="mb-5">
-          <h4 class="text-center mb-4">Backend & APIs</h4>
-          <div class="row g-3">
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">FastAPI</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">Django</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">Pydantic</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">LangChain</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">LangGraph</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">REST APIs</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">GraphQL</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Databases -->
-        <div class="mb-5">
-          <h4 class="text-center mb-4">Vector & Databases</h4>
-          <div class="row g-3">
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">FAISS</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">ChromaDB</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">Pinecone</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">MySQL</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">MongoDB</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">PostgreSQL</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">SQLite</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">Redis</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- DevOps & Cloud -->
-        <div class="mb-5">
-          <h4 class="text-center mb-4">DevOps & Cloud</h4>
-          <div class="row g-3">
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">Docker</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">Kubernetes</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">Git</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">CI/CD</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-              <div class="card h-100 skill-card">
-                <div class="card-body text-center">AWS</div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="work-item reveal">
+      <div class="work-date">FEB 2023 — MAY 2023</div>
+      <div>
+        <h3 class="work-role">Machine Learning Engineer <span style="color: var(--text-faint); font-style: italic;">— Contract</span></h3>
+        <div class="work-company">Unify.ai<span class="separator">·</span>ML Infrastructure Startup<span class="separator">·</span>Remote</div>
+        <p class="work-desc">Built cross-framework ML infrastructure for the Ivy compiler. Shipped TensorRT converters and rigorous testing for production-grade code used by thousands of engineers.</p>
+        <ul class="work-highlights">
+          <li>15+ TensorRT OpConverters: <strong>3× faster inference</strong>, 40% memory reduction</li>
+          <li>Hypothesis-based testing suite — <strong>150+ edge-case bugs caught, 95% coverage</strong> across 200+ ops</li>
+          <li>Mentored 8 OSS contributors through complex cross-framework codebase</li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-5">Professional Experience</h2>
-        <div class="row g-4">
-          <!-- DeepEdge -->
-          <div class="col-12">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="text-primary">Full Stack Machine Learning Engineer</h4>
-                <h5 class="fw-bold">DeepEdge</h5>
-                <p class="text-muted mb-3">March 2025 – Present | Hyderabad, India</p>
-                <ul>
-                  <li>Developed end-to-end anti-UAV quadcopter tracking system for runaway detection under challenging infrared conditions, delivering critical defense capabilities</li>
-                  <li>Built advanced tracking models using YOLOv8 with sophisticated object tracking algorithms including linear and non-linear Kalman filters, and infrared thermal optimization for enhanced performance</li>
-                  <li>Enhanced the performance over 50% over YOLOv8s by introducing motion queue masks</li>
-                  <li>Managed 2-3 simultaneous client projects while maintaining high service quality and meeting all project deadlines. Researched and implemented findings from industry research papers like ERFE to achieve measurable performance improvements</li>
-                  <li>Introduced a new technique: MOG2 Background Subtraction + Morphological Cleaning → Contour Detection + Size/Shape Filtering + SVM Classification of Motion Candidates which achieved 30% performance gains over YOLOv8</li>
-                  <li>Implemented cutting-edge point tracking algorithms including Lucas-Kanade tracking and TAPNet by GoogleDeepmind, CoTracker by Facebook for precise tracking of point-like objects in complex environments</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Deloitte -->
-          <div class="col-12">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="text-primary">Machine Learning Engineer and Developer</h4>
-                <h5 class="fw-bold">Deloitte</h5>
-                <p class="text-muted mb-3">July 2023 – March 2025 | Hyderabad, India</p>
-                <ul>
-                  <li>Architected and deployed multilingual RAG pipeline with FAISS vector database management, FastAPI endpoints, and Docker containerization for scalable AI solutions</li>
-                  <li>Engineered Django-based movie recommendation system utilizing advanced algorithms including content-based filtering, FunkSVD, and popularity-based recommenders for personalized user experiences</li>
-                  <li>Developed high-performance predictive model for customer purchase likelihood achieving 90% accuracy through sophisticated feature engineering and ML techniques</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Unify.ai -->
-          <div class="col-12">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="text-primary">Machine Learning Developer (Freelance)</h4>
-                <h5 class="fw-bold">Unify.ai</h5>
-                <p class="text-muted mb-3">February 2023 – May 2023 | Remote</p>
-                <ul>
-                  <li>Implemented robust functions across TensorFlow, JAX, NumPy, PyTorch, and PaddlePaddle frameworks, increasing code coverage by 10% and enhancing system reliability</li>
-                  <li>Led comprehensive unit testing with Hypothesis framework and managed array-api-test suite achieving 80% test coverage for production-ready code</li>
-                  <li>Developed sophisticated Ivy OpConverters for TensorRT backend and mentored contributors through complex large-scale codebase navigation</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- SKILLS TICKER -->
+<section class="section" style="padding: 60px 0;">
+  <div class="container">
+    <div class="skills-wrap reveal">
+      <div class="skills-track">
+        <span>
+          PYTORCH <span class="sep">/</span> TENSORFLOW <span class="sep">/</span> JAX <span class="sep">/</span> YOLOV8 <span class="sep">/</span> TENSORRT <span class="sep">/</span> CUDA <span class="sep">/</span> OPENCV <span class="sep">/</span> KALMAN FILTERS <span class="sep">/</span> TAPNET <span class="sep">/</span> COTRACKER <span class="sep">/</span> HUGGING FACE <span class="sep">/</span> LANGCHAIN <span class="sep">/</span> LANGGRAPH <span class="sep">/</span> PEFT <span class="sep">/</span> XGBOOST <span class="sep">/</span> PYTHON <span class="sep">/</span> C++ <span class="sep">/</span> DOCKER <span class="sep">/</span> KUBERNETES <span class="sep">/</span> FASTAPI <span class="sep">/</span> JETSON <span class="sep">/</span>&nbsp;
+        </span>
+        <span aria-hidden="true">
+          PYTORCH <span class="sep">/</span> TENSORFLOW <span class="sep">/</span> JAX <span class="sep">/</span> YOLOV8 <span class="sep">/</span> TENSORRT <span class="sep">/</span> CUDA <span class="sep">/</span> OPENCV <span class="sep">/</span> KALMAN FILTERS <span class="sep">/</span> TAPNET <span class="sep">/</span> COTRACKER <span class="sep">/</span> HUGGING FACE <span class="sep">/</span> LANGCHAIN <span class="sep">/</span> LANGGRAPH <span class="sep">/</span> PEFT <span class="sep">/</span> XGBOOST <span class="sep">/</span> PYTHON <span class="sep">/</span> C++ <span class="sep">/</span> DOCKER <span class="sep">/</span> KUBERNETES <span class="sep">/</span> FASTAPI <span class="sep">/</span> JETSON <span class="sep">/</span>&nbsp;
+        </span>
       </div>
-    </section>
+    </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-5">Featured Projects</h2>
-        <div class="row g-4">
-          <!-- AI Agent Flight Scanner -->
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">🤖 AI Agent Flight Scanner</h4>
-                  <p class="card-text">
-                    Intelligent flight data analysis system using advanced RAG architecture
-                  </p>
-                  <p class="mb-0"><small><strong>Tech:</strong> Groq, Ollama, DeepSeek-R1, LangChain, SQLite, ChromaDB, FastAPI</small></p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    Built intelligent flight data analysis system using advanced RAG architecture with DeepSeek-R1-Distill-LLama-70B and LLama 3.2:3B models for comprehensive flight analytics.
-                  </p>
-                  <a
-                    href="https://github.com/soma2000-lang/AI-Agent-Flight-Scanner"
-                    class="github-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github me-2"></i>View on GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Amazon Product Classification -->
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">🛍️ Amazon Product Classification</h4>
-                  <p class="card-text">
-                    Advanced multiclass classification using ALBERT transformer
-                  </p>
-                  <p class="mb-0"><small><strong>Tech:</strong> PyTorch, Deep Learning, ALBERT</small></p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    Engineered sophisticated feature engineering and preprocessing pipeline improving model accuracy by 10% using synthetic PyTorch datasets and ALBERT transformer for advanced multiclass classification.
-                  </p>
-                  <a
-                    href="https://github.com/soma2000-lang/Amazon-Product-Classification"
-                    class="github-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github me-2"></i>View on GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Django Food Delivery Platform -->
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">🍕 Django Food Delivery Platform</h4>
-                  <p class="card-text">
-                    Comprehensive full-stack food delivery solution
-                  </p>
-                  <p class="mb-0"><small><strong>Tech:</strong> Django REST Framework, SQLite, JWT</small></p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    Architected comprehensive full-stack food delivery platform featuring vendor management system, proximity-based search, payment integration, dynamic menu management, automated tax calculations, real-time order tracking, and notification system.
-                  </p>
-                  <a
-                    href="https://github.com/soma2000-lang/Django-Food-Delivery"
-                    class="github-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github me-2"></i>View on GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ChildMind Anxiety Prediction -->
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">🧠 ChildMind Anxiety Prediction</h4>
-                  <p class="card-text">
-                    Predictive healthcare model for early detection
-                  </p>
-                  <p class="mb-0"><strong>Tech:</strong> TensorFlow, Gated RNNs, Deep Learning</small></p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    Developed innovative predictive healthcare model using Gated RNNs to analyze children's physical activity patterns for early detection of problematic internet use, contributing to child mental health research.
-                  </p>
-                  <a
-                    href="https://github.com/soma2000-lang/ChildMind-Anxiety"
-                    class="github-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github me-2"></i>View on GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Custom Vector Database -->
-          <div class="col-md-6">
-            <div class="card h-100 project-card" onclick="toggleProject(this)">
-              <div class="card-body">
-                <div class="project-brief p-3">
-                  <h4 class="card-title">🔍 Custom Vector Database</h4>
-                  <p class="card-text">
-                    High-performance vector database using HNSW graphs
-                  </p>
-                  <p class="mb-0"><small><strong>Tech:</strong> Python, HNSW Graphs</small></p>
-                </div>
-                <div class="project-details p-3">
-                  <p class="mb-3">
-                    Built high-performance lightweight vector database using Hierarchical Navigable Small World (HNSW) graphs for efficient similarity search and retrieval operations.
-                  </p>
-                  <a
-                    href="https://github.com/soma2000-lang/Custom-Vector-DB"
-                    class="github-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github me-2"></i>View on GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="skill-cats">
+      <div class="skill-cat reveal">
+        <h5>Languages</h5>
+        <p>Python, C++, TypeScript, <span>JavaScript, SQL, Bash.</span></p>
       </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications" class="py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-5">Research Publications</h2>
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card h-100">
-              <div class="card-body">
-                <h4 class="card-title">
-                  IEMATICS 2020 - Homomorphic Encryption
-                </h4>
-                <p class="card-text">
-                  Research on data compression techniques for secure transmission and storage using homomorphic encryption methods.
-                </p>
-                <a
-                  href="https://bit.ly/3kbDfs2"
-                  target="_blank"
-                  class="btn btn-primary"
-                  >Read Publication</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card h-100">
-              <div class="card-body">
-                <h4 class="card-title">
-                  SPECTRUM 2020 - Application of Machine Learning in Medicine
-                </h4>
-                <p class="card-text">
-                  Discussed how various deep learning models solve complex real-life medical problems and their practical applications.
-                </p>
-                <a
-                  href="https://bit.ly/2Y5ZqZm"
-                  target="_blank"
-                  class="btn btn-primary"
-                  >Read Publication</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="skill-cat reveal">
+        <h5>Deep Learning</h5>
+        <p>PyTorch, PyTorch Lightning, TensorFlow, JAX, <span>Scikit-learn, XGBoost, LightGBM.</span></p>
       </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-5">Achievements & Recognition</h2>
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <strong>🏆 Challang Hackathon:</strong> Top 10 finalist among 100 elite teams shortlisted worldwide (2 participants per team) - demonstrating exceptional problem-solving capabilities on global stage
-                </li>
-                <li class="list-group-item">
-                  <strong>🥈 HackerEarth ML Challenge:</strong> Ranked 18/2500 participants
-                </li>
-                <li class="list-group-item">
-                  <strong>🥉 Cipla Competition:</strong> Ranked 12/1000+ participants in data science competition
-                </li>
-                <li class="list-group-item">
-                  <strong>🌍 Google Code Jam for Women:</strong> Ranked 1.6k globally
-                </li>
-                <li class="list-group-item">
-                  <strong>🎓 LiFT Scholar 2022:</strong> Top 500 candidates worldwide in developers category by Linux Foundation
-                </li>
-                <li class="list-group-item">
-                  <strong>👥 GHC OSD'23 Mentor:</strong> Mentor for OpenSSF project at Grace Hopper Celebration Open Source Day
-                </li>
-                <li class="list-group-item">
-                  <strong>🌐 Open Source Contributor:</strong> Active contributor to PyTorch Lightning, Hugging Face Transformers, KerasCV, KerasNLP - recognized for high-quality contributions to global developer community
-                </li>
-                <li class="list-group-item">
-                  <strong>📜 Multiple Certifications:</strong> Deep Learning Specialization, NLP, CNN from Coursera
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div class="skill-cat reveal">
+        <h5>Computer Vision</h5>
+        <p>YOLO (v5/v7/v8), Detectron2, OpenCV, Kalman filters, TAPNet, CoTracker, <span>thermal imaging, sub-pixel tracking.</span></p>
       </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-5">Education</h2>
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <div class="card">
-              <div class="card-body text-center">
-                <h4 class="card-title">
-                  Institute of Engineering & Management
-                </h4>
-                <p class="card-text">
-                  Bachelor of Technology in Electronics and Communication Engineering
-                </p>
-                <p class="card-text text-muted">August 2019 – May 2023</p>
-                <p class="card-text fw-bold">CGPA: 8.94</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="skill-cat reveal">
+        <h5>Edge & Optimization</h5>
+        <p>TensorRT, CUDA kernel fusion, quantization, pruning, NVIDIA Jetson, <span>&lt;10ms real-time inference.</span></p>
       </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-5">Get In Touch</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="card">
-              <div class="card-body p-4">
-                <div class="row gy-4">
-                  <div class="col-md-12 text-center">
-                    <h3 class="h4 mb-4">Let's Connect</h3>
-                    <div class="contact-item mb-3">
-                      <i class="fas fa-envelope text-primary me-2"></i>
-                      <a
-                        href="mailto:seckroll16@gmail.com"
-                        class="text-decoration-none"
-                        style="color: #333;"
-                      >
-                        seckroll16@gmail.com
-                      </a>
-                    </div>
-                    <div class="contact-item mb-3">
-                      <i class="fas fa-phone text-primary me-2"></i>
-                      <span style="color: #333;">7980872028</span>
-                    </div>
-                    <div class="contact-item mb-4">
-                      <i class="fas fa-map-marker-alt text-primary me-2"></i>
-                      <span style="color: #333;">Hyderabad, India</span>
-                    </div>
-                    <div class="social-links mt-4 d-flex justify-content-center gap-3">
-                      <a
-                        href="https://www.linkedin.com/in/somasree-majumder-3533411aa/"
-                        target="_blank"
-                        class="btn btn-outline-primary"
-                      >
-                        <i class="fab fa-linkedin me-2"></i>LinkedIn
-                      </a>
-                      <a
-                        href="https://github.com/soma2000-lang"
-                        target="_blank"
-                        class="btn btn-outline-dark"
-                      >
-                        <i class="fab fa-github me-2"></i>GitHub
-                      </a>
-                      <a
-                        href="https://www.kaggle.com/somasreemajumder"
-                        target="_blank"
-                        class="btn btn-outline-info"
-                      >
-                        <i class="fab fa-kaggle me-2"></i>Kaggle
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="skill-cat reveal">
+        <h5>LLMs & GenAI</h5>
+        <p>Hugging Face Transformers, PEFT, LangChain, LangGraph, <span>RAG, RLHF (PPO / DPO), vector databases.</span></p>
       </div>
-    </section>
+      <div class="skill-cat reveal">
+        <h5>Systems</h5>
+        <p>Docker, Kubernetes, FastAPI, CI/CD for ML, <span>AWS, PostgreSQL, Redis, FAISS.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer py-4">
-      <div class="container">
-        <div class="text-center">
-          <p class="mb-0 text-muted footer-text">
-            © 2025 Somasree Majumder. All rights reserved.
-          </p>
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">§ 03 — SELECTED WORK</div>
+      <h2 class="section-title">Things I've <em>built</em> in the open.</h2>
+    </div>
+
+    <div class="projects reveal">
+      <div class="project">
+        <div class="project-header">
+          <span class="project-num">/ 01</span>
+          <a href="https://github.com/soma2000-lang" target="_blank" rel="noopener" class="project-link">View Source <span class="arr">↗</span></a>
+        </div>
+        <h4>LLM RLHF Tuning — PPO &amp; DPO</h4>
+        <p>From-scratch RLHF pipelines using PPO and DPO for LLM alignment. Comparative analysis of reward-model-based PPO vs Direct Preference Optimization — trade-offs in stability, compute efficiency, and output quality.</p>
+        <div class="project-tech">
+          <span class="tech-chip">PyTorch</span>
+          <span class="tech-chip">TRL</span>
+          <span class="tech-chip">Transformers</span>
+          <span class="tech-chip">RLHF</span>
         </div>
       </div>
 
-      <style>
-        .footer {
-          background-color: rgba(255, 255, 255, 0.1);
-          backdrop-filter: blur(10px);
-          border-top: 1px solid rgba(255, 255, 255, 0.1);
-          margin-top: 2rem;
-        }
+      <div class="project">
+        <div class="project-header">
+          <span class="project-num">/ 02</span>
+          <a href="https://github.com/soma2000-lang" target="_blank" rel="noopener" class="project-link">View Source <span class="arr">↗</span></a>
+        </div>
+        <h4>Custom Vector Database</h4>
+        <p>Lightweight vector DB built from scratch using Hierarchical Navigable Small World (HNSW) graphs. No LangChain, no Pinecone — just the algorithm and NumPy. Minimal dependencies, easy integration.</p>
+        <div class="project-tech">
+          <span class="tech-chip">HNSW</span>
+          <span class="tech-chip">NumPy</span>
+          <span class="tech-chip">ANN Search</span>
+        </div>
+      </div>
 
-        .footer-text {
-          font-size: 0.875rem;
-          font-weight: 500;
-          color: rgba(255, 255, 255, 0.8) !important;
-        }
+      <div class="project">
+        <div class="project-header">
+          <span class="project-num">/ 03</span>
+          <a href="https://github.com/soma2000-lang" target="_blank" rel="noopener" class="project-link">View Source <span class="arr">↗</span></a>
+        </div>
+        <h4>Paper Implementations in DL</h4>
+        <p>From-scratch implementations of foundational deep learning papers in PyTorch. Not API wrappers — actual algorithm reimplementations to understand the math underneath.</p>
+        <div class="project-tech">
+          <span class="tech-chip">PyTorch</span>
+          <span class="tech-chip">Research</span>
+          <span class="tech-chip">DL</span>
+        </div>
+      </div>
 
-        .footer-text:hover {
-          color: #fff !important;
-        }
+      <div class="project">
+        <div class="project-header">
+          <span class="project-num">/ 04</span>
+          <a href="https://github.com/soma2000-lang" target="_blank" rel="noopener" class="project-link">View Source <span class="arr">↗</span></a>
+        </div>
+        <h4>Flight Scanner — RAG Analytics</h4>
+        <p>Natural language analytics over structured flight data. RAG architecture with DeepSeek-R1-Distill-LLaMA-70B and LLaMA 3.2:3B. ChromaDB retrieval, FastAPI serving.</p>
+        <div class="project-tech">
+          <span class="tech-chip">RAG</span>
+          <span class="tech-chip">DeepSeek-R1</span>
+          <span class="tech-chip">LangChain</span>
+          <span class="tech-chip">FastAPI</span>
+        </div>
+      </div>
 
-        @media (max-width: 768px) {
-          .footer {
-            padding: 1rem 0;
-          }
-        }
-      </style>
-    </footer>
+      <div class="project">
+        <div class="project-header">
+          <span class="project-num">/ 05</span>
+          <a href="https://github.com/soma2000-lang" target="_blank" rel="noopener" class="project-link">View Source <span class="arr">↗</span></a>
+        </div>
+        <h4>Amazon Product Classification</h4>
+        <p>Fine-tuned ALBERT on 500K Amazon listings across 27 categories with 1:150 class imbalance. <strong style="color: var(--text);">89% F1</strong> — beat BERT by 12% and production baseline by 10%. TensorRT deployment.</p>
+        <div class="project-tech">
+          <span class="tech-chip">ALBERT</span>
+          <span class="tech-chip">PyTorch</span>
+          <span class="tech-chip">TensorRT</span>
+        </div>
+      </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+      <div class="project">
+        <div class="project-header">
+          <span class="project-num">/ 06</span>
+          <a href="https://github.com/soma2000-lang" target="_blank" rel="noopener" class="project-link">View Source <span class="arr">↗</span></a>
+        </div>
+        <h4>ChildMind Anxiety Prediction</h4>
+        <p>Gated RNNs analyzing children's physical activity patterns for early detection of problematic internet use. Healthcare ML with real clinical relevance.</p>
+        <div class="project-tech">
+          <span class="tech-chip">TensorFlow</span>
+          <span class="tech-chip">RNN</span>
+          <span class="tech-chip">Healthcare</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-      // Project card expansion
-      function toggleProject(card) {
-        document.querySelectorAll(".project-card").forEach((otherCard) => {
-          if (otherCard !== card) {
-            otherCard.classList.remove("expanded");
-          }
-        });
-        card.classList.toggle("expanded");
+<!-- OPEN SOURCE -->
+<section class="section" id="oss">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">§ 04 — OPEN SOURCE</div>
+      <h2 class="section-title">Contributions to <em>foundational</em> ML infrastructure.</h2>
+    </div>
+
+    <div class="oss-table reveal">
+      <div class="oss-row header">
+        <div>Project</div>
+        <div>Stars</div>
+        <div>Contribution</div>
+        <div style="text-align:right;">Link</div>
+      </div>
+      <div class="oss-row">
+        <div class="oss-repo">PyTorch Lightning</div>
+        <div class="oss-stars">★ 27K+</div>
+        <div class="oss-contrib">Contributions to training framework used by 50K+ practitioners.</div>
+        <a href="https://github.com/Lightning-AI/pytorch-lightning/pulls?q=author%3Asoma2000-lang" target="_blank" rel="noopener" class="oss-link">PRs ↗</a>
+      </div>
+      <div class="oss-row">
+        <div class="oss-repo">Hugging Face</div>
+        <div class="oss-stars">★ 135K+</div>
+        <div class="oss-contrib">Contributions across the Transformers ecosystem.</div>
+        <a href="https://github.com/huggingface/transformers/pulls?q=author%3Asoma2000-lang" target="_blank" rel="noopener" class="oss-link">PRs ↗</a>
+      </div>
+      <div class="oss-row">
+        <div class="oss-repo">KerasCV / KerasNLP</div>
+        <div class="oss-stars">★ —</div>
+        <div class="oss-contrib">Augmentation layers used by 35K+ engineers in production.</div>
+        <a href="https://github.com/keras-team/keras-cv/pulls?q=author%3Asoma2000-lang" target="_blank" rel="noopener" class="oss-link">PRs ↗</a>
+      </div>
+      <div class="oss-row">
+        <div class="oss-repo">Unify.ai / Ivy</div>
+        <div class="oss-stars">★ —</div>
+        <div class="oss-contrib">15+ TensorRT OpConverters; 3× faster inference, 40% less memory.</div>
+        <a href="https://github.com/unifyai/ivy/pulls?q=author%3Asoma2000-lang" target="_blank" rel="noopener" class="oss-link">PRs ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITION -->
+<section class="section" id="recognition">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">§ 05 — RECOGNITION</div>
+      <h2 class="section-title">Competitions <em>&amp;</em> fellowships.</h2>
+    </div>
+
+    <div class="recognition reveal">
+      <div class="rec-item">
+        <div class="rec-rank">10<span class="small">/100</span></div>
+        <div class="rec-title">Challang Global Hackathon</div>
+        <p class="rec-desc">Top 10 teams worldwide. Built disaster response system using satellite imagery + EfficientNet — 91% IoU.</p>
+      </div>
+      <div class="rec-item">
+        <div class="rec-rank">18<span class="small">/2,500</span></div>
+        <div class="rec-title">HackerEarth ML Challenge</div>
+        <p class="rec-desc">Top 1% ranking among 2,500 participants in a machine learning competition.</p>
+      </div>
+      <div class="rec-item">
+        <div class="rec-rank">12<span class="small">/1,000+</span></div>
+        <div class="rec-title">Cipla Datathon</div>
+        <p class="rec-desc">Top 1.2% in pharma/healthcare data science competition.</p>
+      </div>
+      <div class="rec-item">
+        <div class="rec-rank">500<span class="small">/global</span></div>
+        <div class="rec-title">LinkedIn LIFT Scholar '22</div>
+        <p class="rec-desc">Top 500 women technologists globally. 0.5% acceptance rate.</p>
+      </div>
+      <div class="rec-item">
+        <div class="rec-rank">650<span class="small">+</span></div>
+        <div class="rec-title">LeetCode — Top 5%</div>
+        <p class="rec-desc">Consistent problem-solving practice. Data structures, algorithms, systems.</p>
+      </div>
+      <div class="rec-item">
+        <div class="rec-rank">GHC<span class="small"> '23</span></div>
+        <div class="rec-title">Grace Hopper OSD Mentor</div>
+        <p class="rec-desc">Mentored 15+ contributors on OpenSSF project. 25+ merged PRs during the event.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="section" id="publications">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">§ 06 — PUBLICATIONS</div>
+      <h2 class="section-title">Undergraduate <em>research.</em></h2>
+    </div>
+
+    <div class="reveal">
+      <div class="pub-item">
+        <div class="pub-year">2020</div>
+        <div>
+          <h4 class="pub-title">Privacy-Preserving Cloud Computing</h4>
+          <div class="pub-venue">IEMATICS 2020 · Homomorphic Encryption</div>
+        </div>
+        <a href="https://bit.ly/3kbDfs2" target="_blank" rel="noopener" class="pub-link">Read ↗</a>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2020</div>
+        <div>
+          <h4 class="pub-title">Machine Learning in Medical Diagnosis</h4>
+          <div class="pub-venue">SPECTRUM 2020 · Applied ML for Clinical Diagnostics</div>
+        </div>
+        <a href="https://bit.ly/2Y5ZqZm" target="_blank" rel="noopener" class="pub-link">Read ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-block" id="contact">
+  <div class="container">
+    <div class="section-num" style="margin-bottom: 24px;">§ 07 — CONTACT</div>
+    <h2>Have an <em>interesting</em> problem?<br />Let's talk.</h2>
+
+    <div class="hero-cta">
+      <a href="mailto:seckroll16@gmail.com" class="btn primary">
+        seckroll16@gmail.com <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="label">Email</div>
+        <a href="mailto:seckroll16@gmail.com">seckroll16@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <div class="label">LinkedIn</div>
+        <a href="https://www.linkedin.com/in/somasree-majumder-3533411aa/" target="_blank" rel="noopener">/in/somasree-majumder</a>
+      </div>
+      <div class="contact-item">
+        <div class="label">GitHub</div>
+        <a href="https://github.com/soma2000-lang" target="_blank" rel="noopener">@soma2000-lang</a>
+      </div>
+      <div class="contact-item">
+        <div class="label">Location</div>
+        <span>Hyderabad, IN</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+    <div>© 2026 · SOMASREE MAJUMDER · ALL RIGHTS RESERVED</div>
+    <div>BUILT WITH HTML · HOSTED ON GITHUB PAGES</div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
       }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-      // Prevent links from triggering card expansion
-      document.querySelectorAll(".github-link").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.stopPropagation();
-        });
-      });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
 
-      // Intersection Observer for section animations
-      const observerOptions = {
-        threshold: 0.1
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll('section').forEach(section => {
-        observer.observe(section);
-      });
-
-      // Security measures
-      document.addEventListener("DOMContentLoaded", function () {
-        // Input sanitization function
-        function sanitizeInput(input) {
-          return input
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#x27;")
-            .replace(/\//g, "&#x2F;");
-        }
-
-        // Protect against clickjacking
-        if (window.self === window.top) {
-          const style = document.createElement("style");
-          style.innerHTML = "body { display: block !important; }";
-          document.head.appendChild(style);
-        } else {
-          document.body.innerHTML = "This content cannot be displayed in an iframe.";
-        }
-      });
-    </script>
-  </body>
+</body>
 </html>
